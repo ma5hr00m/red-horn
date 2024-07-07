@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		%sveltekit.head%
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div id="app">%sveltekit.body%</div>
+	</body>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			user-select: none;
+		}
+		a {
+			text-decoration: none;
+		}
+		ul {
+			list-style: none;
+		}
+		:root {
+			font-size: 16px;
+		}
+		#app {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			overflow: hidden;
+			background: radial-gradient(circle, #1a1a1a 10%, #222 30%, #333 100%);
+		}
+		:root {
+			font-size: 16px;
+		}
+		@media screen and (max-width: 1200px) {
+			:root {
+				font-size: 15px;
+			}
+		}
+		@media screen and (max-width: 992px) {
+			:root {
+				font-size: 14px;
+			}
+		}
+		@media screen and (max-width: 768px) {
+			:root {
+				font-size: 13px;
+			}
+		}
+		@media screen and (max-width: 576px) {
+			:root {
+				font-size: 12px;
+			}
+		}
+		@media screen and (max-height: 648px) {
+			footer {
+				display: none;
+			}
+		}
+	</style>
+</html>
