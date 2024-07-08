@@ -9,8 +9,9 @@
 	<slot />
 </main>
 
-<style lang="scss">
-h1 {
-	color: vr.$primary-color;
-}
+
+<style global lang="scss">
+	h1 {
+		color: vr.$primary-color;
+	}
 </style>

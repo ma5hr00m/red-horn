@@ -1,8 +1,10 @@
 <script lang="ts">
-  import { helmet } from '$lib/stores/stores'; 
+  import helmet from '$lib/stores/stores'; 
   $: currentHelmet = $helmet;
+
+  let title = `${$helmet.preffixTitle} | ${$helmet.suffixTitle}`;
 </script>
 
 <svelte:head>
-  <title>{currentHelmet.title}</title>
+  <title>{title}</title>
 </svelte:head>
