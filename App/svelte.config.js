@@ -4,6 +4,7 @@ import {
 }
 from '@sveltejs/vite-plugin-svelte';
 import preprocess from 'svelte-preprocess';
+import { mdsvex } from 'mdsvex';
 
 const config = {
   /**
@@ -21,8 +22,16 @@ const config = {
           `
         }
       }),
-    vitePreprocess()
+    vitePreprocess(),
+    mdsvex({
+			extensions: ['.md'],
+			layout: {
+				blog: 'src/routes/blog/post.svelte'
+			}
+		})
   ],
+
+  extensions: ['.svelte', '.md'],
 
   kit: {
     adapter: adapter()
