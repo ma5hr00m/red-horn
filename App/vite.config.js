@@ -10,7 +10,10 @@ from 'vite';
 export
 default defineConfig({
     plugins:
-    [sveltekit()]
+    [sveltekit()],
+    server: {
+      host: true
+    }
   })
 
 /**

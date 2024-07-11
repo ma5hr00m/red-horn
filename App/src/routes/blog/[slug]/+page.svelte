@@ -1,7 +1,7 @@
 <script>
   import '$lib/styles/markdown/github-markdown-light.scss';
 	export let data;
-  const { title, date, content } = data;
+  const { title, date, author, content } = data;
 </script>
 
 <svelte:head>
@@ -10,14 +10,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </svelte:head>
 <article class="markdown-body">
-	<h1>{title}</h1>
-	<p>Published: {date}</p>
+	<h1 class="postTitle">{title}</h1>
+	<p class="postMeta">
+		<span class="author">{author}</span>
+		<span class="date">{date}</span>
+	</p>
 	<svelte:component this={content} />
 </article>
 
 <style>
   .markdown-body {
-		box-sizing: border-box;
 		min-width: 720px;
 		max-width: 980px;
 		margin: 0 auto;

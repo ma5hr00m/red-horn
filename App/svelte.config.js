@@ -18,7 +18,7 @@ const config = {
     preprocess({
       scss: {
         prependData: `
-            @use 'src/lib/scss/variables'as vr;
+            @use 'src/lib/styles/variables'as vr;
           `
         }
       }),
