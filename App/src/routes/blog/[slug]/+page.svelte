@@ -1,7 +1,7 @@
 <script>
   import '$lib/styles/markdown/github-markdown-light.scss';
 	export let data;
-  const { title, date, author, content } = data;
+  const { title, date, author, content, categories, cover } = data;
 </script>
 
 <svelte:head>
@@ -14,7 +14,11 @@
 	<p class="postMeta">
 		<span class="author">{author}</span>
 		<span class="date">{date}</span>
+		<span class="categories">{categories}</span>
 	</p>
+	<div>
+		<img src={cover} alt={title} />
+	</div>
 	<svelte:component this={content} />
 </article>
 

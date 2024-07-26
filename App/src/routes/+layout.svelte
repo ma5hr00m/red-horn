@@ -1,15 +1,14 @@
 <script>
 	import GlobalHeader from '$lib/components/GlobalHeader.svelte';
-	import GlobalFooter from '$lib/components/GlobalFooter.svelte';
 	import '$lib/styles/styles.scss';
-  import { fade } from 'svelte/transition';
+	import { fade, fly } from 'svelte/transition';
 
 	export let data;
 </script>
 
 <GlobalHeader></GlobalHeader>
 {#key data.currentRoute}
-	<main in:fade={{ duration: 150, delay: 150 }} out:fade={{ duration: 150 }}>
+	<main in:fly={{ x: -10, opacity: 0, duration: 150, delay: 150 }} out:fly={{ x: 10, opacity: 0, duration: 250 }}>
 		<slot />
 	</main>
 {/key}
@@ -30,7 +29,7 @@
 	}
 
 	main {
-		padding: 1rem 6rem 2.5rem;
+		padding: 0 6rem 2.5rem;
 		width: 100%;
 		flex: 1;
 		display: flex;

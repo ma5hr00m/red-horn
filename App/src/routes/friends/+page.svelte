@@ -14,10 +14,6 @@
 </script>
 
 <div class="container">
-  <section>
-    <h2>志趣相仿的朋友们</h2>
-    <p></p>
-  </section>
   <div class="friends" in:fly={{ duration: 300, y: -1, opacity: 0 }} out:fly={{ duration: 300 }}>
     {#each friendsList as friend}
       <FriendCard friend={friend}></FriendCard>
