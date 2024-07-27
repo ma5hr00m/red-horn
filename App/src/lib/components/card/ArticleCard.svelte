@@ -59,7 +59,7 @@
     & > .title {
       position: relative;
       font-size: 1.5rem;
-      color: #FFA941;
+      color: #95d146;
       
       &::after {
         content: '';
@@ -69,7 +69,7 @@
         left: 0;
         width: 0;
         height: 2px;
-        background-color: #FFA941;
+        background-color: #95d146;
         transition: width 0.3s;
       }
 

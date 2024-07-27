@@ -32,13 +32,13 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    transition: background .2s;
+    transition: background-color .2s;
     border-radius: .5rem;
     border: 1px solid #ddd;
 
     &:hover {
-      background-image: repeating-linear-gradient(45deg, #fff, #fff 14px, #fff2f2 14px, #fff2f2 16px);
-      border: 1px solid #FFA941;
+      background-image: repeating-linear-gradient(45deg, #fff, #fff 14px, #deffca 14px, #deffca 16px);
+      border: 1px solid #95d146;
     }
   }
   .image {
@@ -56,7 +56,7 @@
 
     h3 {
       margin-bottom: .25rem;
-      color: #FFA941;
+      color: #95d146;
     }
     .description,
     .url {

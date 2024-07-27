@@ -14,7 +14,7 @@
 </script>
 
 <div class="container">
-  <div class="friends" in:fly={{ duration: 300, y: -1, opacity: 0 }} out:fly={{ duration: 300 }}>
+  <div class="friends">
     {#each friendsList as friend}
       <FriendCard friend={friend}></FriendCard>
     {/each}

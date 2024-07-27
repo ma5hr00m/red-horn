@@ -59,7 +59,7 @@
     white-space: nowrap;
 
     &:hover {
-      background: #FFCA99;
+      background: #ccf398;
       color: #fff;
     }
 
@@ -86,7 +86,7 @@
   }
   
   a[aria-current="page"] {
-    background: #FFA941;
+    background: #95d146;
     color: #fff;
     
     & > .iconsContainer {

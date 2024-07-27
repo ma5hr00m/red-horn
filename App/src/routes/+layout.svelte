@@ -1,14 +1,16 @@
+<!--
+想象力将会成为人类愈加宝贵的财富 :)
+当AI逐渐接管生活中的琐事，人们终会抬头仰望最初的那片星空，思想将会从繁琐的日常中挣脱出来，亦如洞穴中的智人在解决温饱问题后盯着火苗发起的沉思。
+-->
 <script>
 	import GlobalHeader from '$lib/components/GlobalHeader.svelte';
 	import '$lib/styles/styles.scss';
-	import { fade, fly } from 'svelte/transition';
-
 	export let data;
 </script>
 
 <GlobalHeader></GlobalHeader>
 {#key data.currentRoute}
-	<main in:fly={{ x: -10, opacity: 0, duration: 150, delay: 150 }} out:fly={{ x: 10, opacity: 0, duration: 250 }}>
+	<main>
 		<slot />
 	</main>
 {/key}
