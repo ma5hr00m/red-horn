@@ -10,13 +10,12 @@ a {
 	text-decoration: none;
 }
 
-ul,
-ol {
-	list-style: none;
-}
-
 :root {
 	font-size: 16px;
+}
+
+::-webkit-scrollbar {
+  display: none; /* Chrome Safari */
 }
 
 @media screen and (max-width: 1200px) {

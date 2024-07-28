@@ -1,0 +1,142 @@
+# Site
+# meta content
+site:
+  title: 菇物语
+  favicon: https://img.ma5hr00m.top/blog/im-favicon.svg
+  author: kinoko
+  description: 蘑菇の物语是kinoko(ma5hr00m)的个人网站，记录了他的技术博客以及一些生活感悟，是kinoko(ma5hr00m)对外展示的重要平台之一
+  keywords: kinoko, Kinoko, 蘑菇の物语, 菇物语, ma5hr00m, Ma5hr00m, kinoko的博客, kinoko的个人网站, ma5hr00m的博客, ma5hr00m的个人网站
+
+# Navigation
+navigation:
+  - title: 主页
+    href: /
+    icon: hugeicons:home-01
+  - title: 文章
+    href: /blog
+    icon: hugeicons:sticky-note-02
+  - title: 关于
+    href: /about
+    icon: hugeicons:telegram
+  - title: 友链
+    href: /friends
+    icon: hugeicons:clapping-02
+  - title: 项目
+    href: /projects
+    icon: hugeicons:codesandbox
+
+# Site Links
+# icon: https://icon-sets.iconify.design/hugeicons/?keyword=Huge
+siteLinks:
+  - title: GitHub
+    icon: hugeicons:github
+    url: https://github.com/ma5hr00m
+  - title: Twitter
+    icon: hugeicons:new-twitter
+    url: https://x.com/ma5hr00m
+  - title: Pixiv
+    icon: hugeicons:paint-brush-04
+    url: https://www.pixiv.net/users/86286425
+  - title: BiliBili
+    icon: hugeicons:tv-01
+    url: https://space.bilibili.com/1038299946
+
+# Survey List
+surveyList:
+  - question: 为什么搭建个人网站？
+    answer: 我希望能有一个稳定的在线平台，可以用来发表自己的知识积累，以及一些想法。此外，能在互联网中有自己的一片区域，并且可以在这个区域上发散自己的创造力，这本身就是一件很棒的事情。
+  - question: 为什么要搞做一个网络虚拟形象呢？
+    answer: 有趣，而且，在互联网中，部分人们确实需要有一个面具来维持稳定。
+  - question: 为什么学习 Web 开发和 Web 安全技术？
+    answer: 创造新事物是一件很酷的事情，这是有效向别人传递想法的手段；而能够触及到别人本不想让你接触到的领域，则是一件有趣的事情 :)
+  - question: 原昵称为 ma5hr00m，为什么后来更改为 kinoko？
+    answer: 原昵称不方便记忆，kinoko 更加朗朗上口。
+
+# Notice
+notice:
+  title: 公告
+  content: 本站仍处于开发阶段，新功能不断添加中 :)
+
+# Projects List
+# /projects
+projectsList:
+  - sort: 个人项目
+    description: 这里是我个人的一些项目，包括博客、工具等等。
+    projects:
+      - title: Kinoko
+        description: 个人博客框架，简洁的页面设计，以及丰富的交互动效，持续开发中。重复性语段，重复性语段，重复性语段，重复性语段，重复性语段，重复性语段，重复性语段，重复性语段，重复性语段，。
+        cover: https://agu-img.oss-cn-hangzhou.aliyuncs.com/blog/20230924231727.png
+        href: https://github.com/ma5hr00m/whoami
+        tags:
+          - SvelteKit
+          - JavaScript
+      - title: Vimage
+        description: 团队美术素材管理平台，实现图片等美术素材的线上存储、管理与共享。
+        cover: https://agu-img.oss-cn-hangzhou.aliyuncs.com/blog/20230924231727.png
+        href: https://github.com/ma5hr00m/vimage
+        tags:
+          - React
+          - TypeScript
+          - Gin
+      - title: Vimage
+        description: 团队美术素材管理平台，实现图片等美术素材的线上存储、管理与共享。
+        cover: https://agu-img.oss-cn-hangzhou.aliyuncs.com/blog/20230924231727.png
+        href: https://github.com/ma5hr00m/vimage
+        tags:
+          - React
+          - TypeScript
+          - Gin
+  - sort: 合作项目
+    description: 这里是我参与的一些项目，包括团队项目、开源项目等等。
+    projects:
+      - title: K
+        description: 个人博客框架，简洁的页面设计，以及丰富的交互动效，持续开发中。
+        cover: https://agu-img.oss-cn-hangzhou.aliyuncs.com/blog/20230924231727.png
+        href: https://github.com/ma5hr00m/whoami
+        tags:
+          - SvelteKit
+          - JavaScript
+      - title: V
+        description: 团队美术素材管理平台，实现图片等美术素材的线上存储、管理与共享。
+        cover: https://agu-img.oss-cn-hangzhou.aliyuncs.com/blog/20230924231727.png
+        href: https://github.com/ma5hr00m/vimage
+        tags:
+          - React
+          - TypeScript
+          - Gin
+
+# Friends List
+# /friends
+friendsList:
+  - name: ek1ng
+    avatar: https://q1.qlogo.cn/g?b=qq&nk=761042182&s=160
+    href: https://ek1ng.com
+    description: Web方向CTFer，安全行业
+  - name: ripple
+    avatar: https://q1.qlogo.cn/g?b=qq&nk=3331491980&s=160
+    href: https://rippleqaq.top
+    description: 学霸，中国时区美国作息
+  - name: ch405
+    avatar: https://q1.qlogo.cn/g?b=qq&nk=1286518974&s=160
+    href: https://ch405.live
+    description: Misc方向CTFer，面面俱到
+  - name: zbwer
+    avatar: https://q1.qlogo.cn/g?b=qq&nk=1641064392&s=160
+    href: https://blog.zbwer.work
+    description: Frontend Web Developer
+  - name: Ec3o
+    avatar: https://q1.qlogo.cn/g?b=qq&nk=2499302531&s=160
+    href: https://ec3o.fun
+    description: Web方向CTFer
+  - name: mysid
+    avatar: https://q1.qlogo.cn/g?b=qq&nk=821675766&s=160
+    href: http://mysid.top
+    description: Web方向CTFer，渗透/Java特攻
+  - name: Pinpe
+    avatar: https://agu-img.oss-cn-hangzhou.aliyuncs.com/blog/a2bb7859939871165f438ab2f96d72b8343dae41.jpg%40150w_150h.jpg
+    href: https://pinpe.top
+    description: 一个属于自己的云朵
+  - name: smilkes
+    avatar: https://q1.qlogo.cn/g?b=qq&nk=1937683643&s=160
+    href: http://smilkes.site
+    description: 机器学习研究

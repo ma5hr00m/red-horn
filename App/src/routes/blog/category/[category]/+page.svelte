@@ -5,7 +5,7 @@
 <h1>Blog</h1>
 
 <ul>
-  <h2>{data.category}</h2>
+	<h2>{data.category}</h2>
 	{#each data.posts as post}
 		<li>
 			<h2>

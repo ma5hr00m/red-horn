@@ -1,8 +1,6 @@
 ---
-title: about
+title: 👋Hello，这里是 Ma5hr00m
 ---
-
-# 👋Hello，这里是 Ma5hr00m
 
 现就读于杭州电子科技大学，网络工程专业。Vidar-Team 22 级 Web 手（兼职美工），HDUHelper 第十二届前端部分管主席。
 

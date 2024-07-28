@@ -1,33 +1,37 @@
 <script>
-  import '$lib/styles/markdown/github-markdown-light.scss';
+	import '$lib/styles/markdown/github-markdown-light.scss';
+	import { config } from '$lib/stores/index';
 	export let data;
-  const { title, date, author, content, categories, cover } = data;
 </script>
 
 <svelte:head>
-	<title>My blog - {title}</title>
-	<meta property="og:title" content={title} />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{data.title} | {$config.site.title}</title>
 </svelte:head>
+
 <article class="markdown-body">
-	<h1 class="postTitle">{title}</h1>
+	<h1 class="postTitle">{data.title}</h1>
 	<p class="postMeta">
-		<span class="author">{author}</span>
-		<span class="date">{date}</span>
-		<span class="categories">{categories}</span>
+		<span class="author">{data.author}</span>
+		<span class="date">{data.date}</span>
+		<span class="categories">{data.categories}</span>
 	</p>
 	<div>
-		<img src={cover} alt={title} />
+		<img src={data.cover} alt={data.title} />
 	</div>
-	<svelte:component this={content} />
+	<svelte:component this={data.content} />
 </article>
 
 <style>
-  .markdown-body {
+	.markdown-body {
 		min-width: 720px;
 		max-width: 980px;
+		height: fit-content;
 		margin: 0 auto;
-		padding: 45px;
+		padding: 2rem;
+		background: #fff;
+		color: #4f4a4a;
+		border-radius: 0.5rem;
+		border: solid 1px #ddd;
 	}
 
 	@media (max-width: 767px) {

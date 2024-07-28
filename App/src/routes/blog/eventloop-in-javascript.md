@@ -2,7 +2,7 @@
 title: Event loop in JavaScript
 date: '2024-05-18'
 categories:
-- "JavaScript"
+  - 'JavaScript'
 author: ma5hr00m
 cover: https://img.ma5hr00m.top/blog/20240610160523.png
 ---
@@ -68,15 +68,17 @@ cover: https://img.ma5hr00m.top/blog/20240610160523.png
 ```jsx
 console.log('宏任务开始');
 
-setTimeout(function() {
-  console.log('宏任务');
+setTimeout(function () {
+	console.log('宏任务');
 }, 0);
 
-Promise.resolve().then(function() {
-  console.log('微任务 1');
-}).then(function() {
-  console.log('微任务 2');
-});
+Promise.resolve()
+	.then(function () {
+		console.log('微任务 1');
+	})
+	.then(function () {
+		console.log('微任务 2');
+	});
 
 console.log('宏任务结束');
 ```
@@ -119,23 +121,24 @@ console.log('宏任务结束');
 ```jsx
 // 示例代码
 const syncFunc = (startTime) => {
-  const time = new Date().getTime();
-  while (new Date().getTime() - time < 5000) { /* 长时间同步阻塞 */ }
-  const offset = new Date().getTime() - startTime;
-  console.log(`同步函数执行完毕，时间偏差：${offset}毫秒`);
+	const time = new Date().getTime();
+	while (new Date().getTime() - time < 5000) {
+		/* 长时间同步阻塞 */
+	}
+	const offset = new Date().getTime() - startTime;
+	console.log(`同步函数执行完毕，时间偏差：${offset}毫秒`);
 };
 
 const asyncFunc = (startTime) => {
-  setTimeout(() => {
-    const offset = new Date().getTime() - startTime;
-    console.log(`异步函数执行完毕，时间偏差：${offset}毫秒`);
-  }, 2000);
+	setTimeout(() => {
+		const offset = new Date().getTime() - startTime;
+		console.log(`异步函数执行完毕，时间偏差：${offset}毫秒`);
+	}, 2000);
 };
 
 const startTime = new Date().getTime();
 asyncFunc(startTime);
 syncFunc(startTime);
-
 ```
 
 在上述代码中，`syncFunc` 会阻塞主线程5秒钟，即使 `asyncFunc` 的定时器在2秒后到期，它的回调也必须等待 `syncFunc` 完成。这就是为什么定时器的执行时间可能不准确。为了提高定时器的准确性，应当尽量减少同步代码的执行时间，或者使用其他机制来处理长时间运行的任务。
@@ -151,9 +154,9 @@ syncFunc(startTime);
 ```jsx
 // 使用 requestAnimationFrame 请求动画帧
 function updateAnimation() {
-  // 更新动画的代码
-  // ...
-  requestAnimationFrame(updateAnimation);
+	// 更新动画的代码
+	// ...
+	requestAnimationFrame(updateAnimation);
 }
 
 // 开始动画
@@ -171,31 +174,31 @@ requestAnimationFrame(updateAnimation);
 ```jsx
 // 假设有一个函数用于懒加载图片
 function lazyLoadImages(images) {
-  images.forEach(image => {
-    if (isInViewport(image)) {
-      loadImage(image);
-    }
-  });
+	images.forEach((image) => {
+		if (isInViewport(image)) {
+			loadImage(image);
+		}
+	});
 }
 
 // 使用 requestIdleCallback 来调度懒加载任务
 function scheduleLazyLoad(images) {
-  // 如果浏览器支持 requestIdleCallback，则使用它
-  if ('requestIdleCallback' in window) {
-    requestIdleCallback(deadline => {
-      while (deadline.timeRemaining() > 0 && images.length > 0) {
-        lazyLoadImages(images.splice(0, 2)); // 每次处理两个图片
-      }
+	// 如果浏览器支持 requestIdleCallback，则使用它
+	if ('requestIdleCallback' in window) {
+		requestIdleCallback((deadline) => {
+			while (deadline.timeRemaining() > 0 && images.length > 0) {
+				lazyLoadImages(images.splice(0, 2)); // 每次处理两个图片
+			}
 
-      // 如果还有图片未处理，继续调度
-      if (images.length > 0) {
-        scheduleLazyLoad(images);
-      }
-    });
-  } else {
-    // 如果浏览器不支持 requestIdleCallback，则回退到 setTimeout
-    setTimeout(() => lazyLoadImages(images), 0);
-  }
+			// 如果还有图片未处理，继续调度
+			if (images.length > 0) {
+				scheduleLazyLoad(images);
+			}
+		});
+	} else {
+		// 如果浏览器不支持 requestIdleCallback，则回退到 setTimeout
+		setTimeout(() => lazyLoadImages(images), 0);
+	}
 }
 
 // 假设页面上有很多图片需要懒加载

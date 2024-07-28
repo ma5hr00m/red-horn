@@ -10,26 +10,27 @@
 				<ArticleCard {post}></ArticleCard>
 			</li>
 		{/each}
-	</ul>	
+	</ul>
 </div>
 
 <style lang="scss">
-  .container {
-    width: fit-content;
-    height: fit-content;
+	.container {
+		width: fit-content;
+		height: fit-content;
 		margin: 0 auto;
 		padding: 2rem;
-    background: #fff;
-    color: #4f4a4a;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: .5rem;
-    border: solid 1px #ddd;
-  }
-  ul {
-    display: flex;
-    flex-direction: column;
-    row-gap: 1.5rem;
-  }
+		background: #fff;
+		color: #4f4a4a;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		border-radius: 0.5rem;
+		border: solid 1px #ddd;
+	}
+	ul {
+		display: flex;
+		flex-direction: column;
+		row-gap: 1.5rem;
+		list-style: none;
+	}
 </style>

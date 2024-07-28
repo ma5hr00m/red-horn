@@ -1,14 +1,26 @@
 <script>
-  import { fade } from 'svelte/transition';
-  let visible = true;
+	import Icon from '@iconify/svelte';
+	import { onMount } from 'svelte';
+
+	let config;
+
+	onMount(async () => {
+		const response = await fetch('/api/config');
+		if (response.ok) {
+			config = await response.json();
+			console.log(config);
+		} else {
+			console.error('Failed to fetch config');
+		}
+	});
 </script>
 
-<button on:click={() => visible = !visible}>
-  Toggle
-</button>
-
-{#if visible}
-  <div transition:fade>
-    This element will fade in and out
-  </div>
-{/if}
+<main>
+	<Icon icon="hugeicons:account-setting-03" />
+	<h1>配置数据</h1>
+	{#if config}
+		<pre>{JSON.stringify(config, null, 2)}</pre>
+	{:else}
+		<p>加载中...</p>
+	{/if}
+</main>
