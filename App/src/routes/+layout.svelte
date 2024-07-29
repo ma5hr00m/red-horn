@@ -4,7 +4,7 @@
 	import Meta from '$lib/components/Meta.svelte';
 	import { config } from '$lib/stores/index';
 	import { fly } from 'svelte/transition';
-	import { onNavigate } from '$app/navigation';
+	import { onNavigate, afterNavigate } from '$app/navigation';
 
 	export let data;
 
@@ -15,12 +15,11 @@
 	let targetRoute;
 	let currentRouteIndex;
 	let targetRouteIndex;
-
 	let enterTransition;
 	let exitTransition;
 
 	function updateTitle(pathname) {
-		const route = navigation.find(route => route.href === pathname);
+		const route = navigation.find((route) => route.href === pathname);
 		currentTitle = route ? route.title : null;
 	}
 
@@ -36,15 +35,16 @@
 		currentRoute = from.route.id;
 		targetRoute = to.route.id;
 
-		currentRouteIndex = navigation.find(route => route.href === currentRoute)?.index;
-		targetRouteIndex = navigation.find(route => route.href === targetRoute)?.index;
+		currentRouteIndex = navigation.find((route) => route.href === currentRoute)?.index;
+		targetRouteIndex = navigation.find((route) => route.href === targetRoute)?.index;
 
-		// console.log('from ' + currentRoute + ' to ' + targetRoute);
-		currentTitle = updateTitle(targetRoute);
 		updateTransitions();
 	});
-</script>
 
+	afterNavigate(() => {
+		updateTitle(targetRoute);
+	});
+</script>
 
 <svelte:head>
 	<title>{currentTitle} | {title}</title>

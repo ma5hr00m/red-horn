@@ -2,6 +2,8 @@ import adapter from '@sveltejs/adapter-auto';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import preprocess from 'svelte-preprocess';
 import { mdsvex } from 'mdsvex';
+import remarkSlug from 'remark-slug';
+import remarkAutolinkHeadings from 'remark-autolink-headings';
 
 const config = {
 	/**
@@ -24,7 +26,8 @@ const config = {
 			extensions: ['.md'],
 			layout: {
 				blog: 'src/routes/blog/post.svelte'
-			}
+			},
+			remarkPlugins: [remarkSlug, remarkAutolinkHeadings]
 		})
 	],
 

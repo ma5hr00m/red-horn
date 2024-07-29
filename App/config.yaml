@@ -46,7 +46,7 @@ surveyList:
   - question: 为什么搭建个人网站？
     answer: 我希望能有一个稳定的在线平台，可以用来发表自己的知识积累，以及一些想法。此外，能在互联网中有自己的一片区域，并且可以在这个区域上发散自己的创造力，这本身就是一件很棒的事情。
   - question: 为什么要搞做一个网络虚拟形象呢？
-    answer: 有趣，而且，在互联网中，部分人们确实需要有一个面具来维持稳定。
+    answer: 有趣，而且，在互联网中，部分人们确实需要有一个面具来维持稳定的心理状态。
   - question: 为什么学习 Web 开发和 Web 安全技术？
     answer: 创造新事物是一件很酷的事情，这是有效向别人传递想法的手段；而能够触及到别人本不想让你接触到的领域，则是一件有趣的事情 :)
   - question: 原昵称为 ma5hr00m，为什么后来更改为 kinoko？
@@ -63,47 +63,21 @@ projectsList:
   - sort: 个人项目
     description: 这里是我个人的一些项目，包括博客、工具等等。
     projects:
-      - title: Kinoko
-        description: 个人博客框架，简洁的页面设计，以及丰富的交互动效，持续开发中。重复性语段，重复性语段，重复性语段，重复性语段，重复性语段，重复性语段，重复性语段，重复性语段，重复性语段，。
-        cover: https://agu-img.oss-cn-hangzhou.aliyuncs.com/blog/20230924231727.png
+      - title: Kinoko个人博客
+        description: 个人博客框架，特点是简洁的页面设计以及丰富的交互动效，目前仍处于开发阶段，功能持续更新中。
+        cover: https://img.ma5hr00m.top/main/whoami.png
         href: https://github.com/ma5hr00m/whoami
         tags:
           - SvelteKit
           - JavaScript
-      - title: Vimage
-        description: 团队美术素材管理平台，实现图片等美术素材的线上存储、管理与共享。
-        cover: https://agu-img.oss-cn-hangzhou.aliyuncs.com/blog/20230924231727.png
-        href: https://github.com/ma5hr00m/vimage
+      - title: HGAME2024等待页
+        description: HGAME 2024 等待页，并没有什么特色，只是一个简单的等待页。
+        cover: https://img.ma5hr00m.top/main/hgame2024.png
+        href: https://hgame.ma5hr00m.top/
         tags:
-          - React
-          - TypeScript
-          - Gin
-      - title: Vimage
-        description: 团队美术素材管理平台，实现图片等美术素材的线上存储、管理与共享。
-        cover: https://agu-img.oss-cn-hangzhou.aliyuncs.com/blog/20230924231727.png
-        href: https://github.com/ma5hr00m/vimage
-        tags:
-          - React
-          - TypeScript
-          - Gin
-  - sort: 合作项目
-    description: 这里是我参与的一些项目，包括团队项目、开源项目等等。
-    projects:
-      - title: K
-        description: 个人博客框架，简洁的页面设计，以及丰富的交互动效，持续开发中。
-        cover: https://agu-img.oss-cn-hangzhou.aliyuncs.com/blog/20230924231727.png
-        href: https://github.com/ma5hr00m/whoami
-        tags:
-          - SvelteKit
+          - HTML
+          - CSS
           - JavaScript
-      - title: V
-        description: 团队美术素材管理平台，实现图片等美术素材的线上存储、管理与共享。
-        cover: https://agu-img.oss-cn-hangzhou.aliyuncs.com/blog/20230924231727.png
-        href: https://github.com/ma5hr00m/vimage
-        tags:
-          - React
-          - TypeScript
-          - Gin
 
 # Friends List
 # /friends

@@ -41,11 +41,13 @@
 			height: 9rem;
 			width: 16rem;
 			background: #ddd;
+			border-radius: 0.5rem;
+			border: 1px solid #ccc;
+			overflow: hidden;
 
 			.cover {
 				width: 100%;
 				height: 100%;
-				border-radius: 0.5rem;
 			}
 		}
 

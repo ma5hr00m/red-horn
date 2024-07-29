@@ -1,4 +1,5 @@
 <script>
+	import BackButton from '$lib/components/button/BackButton.svelte';
 	import { onMount } from 'svelte';
 	import Icon from '@iconify/svelte';
 	import { page } from '$app/stores';
@@ -14,6 +15,7 @@
 
 <nav>
 	<div class="routes">
+		<BackButton></BackButton>
 		{#each routes as route}
 			<a href={route.href} aria-current={$page.url.pathname === route.href ? 'page' : null}>
 				<div class="iconsContainer" style="--icon-width: {iconWidth}px;">

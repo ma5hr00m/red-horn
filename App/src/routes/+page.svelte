@@ -1,7 +1,7 @@
 <script>
 	import Icon from '@iconify/svelte';
 	import { config } from '$lib/stores/index';
-	
+
 	const siteLinks = $config.siteLinks;
 	const surveyList = $config.surveyList;
 	const notice = $config.notice;
@@ -69,7 +69,7 @@
 <style lang="scss">
 	.container {
 		width: 70rem;
-		padding: 1rem 2rem;
+		padding: 0 2rem 1rem;
 		color: #4f4a4a;
 	}
 	.content {

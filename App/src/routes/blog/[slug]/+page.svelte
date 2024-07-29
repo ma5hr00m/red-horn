@@ -1,12 +1,29 @@
 <script>
 	import '$lib/styles/markdown/github-markdown-light.scss';
 	import { config } from '$lib/stores/index';
+	import TableOfContents from '$lib/components/TOC.svelte';
+	import { onMount } from 'svelte';
+
 	export let data;
+
+	let headings = [];
+
+	onMount(() => {
+		headings = Array.from(
+			document.querySelectorAll('.markdown-body h1, .markdown-body h2, .markdown-body h3')
+		).map((heading) => ({
+			id: heading.id,
+			text: heading.innerText,
+			level: parseInt(heading.tagName[1])
+		}));
+	});
 </script>
 
 <svelte:head>
 	<title>{data.title} | {$config.site.title}</title>
 </svelte:head>
+
+<TableOfContents {headings} />
 
 <article class="markdown-body">
 	<h1 class="postTitle">{data.title}</h1>

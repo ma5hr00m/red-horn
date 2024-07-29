@@ -2,7 +2,7 @@
 	import FriendCard from '$lib/components/card/FriendCard.svelte';
 	import { config } from '$lib/stores/index';
 
-  const friendsList = $config.friendsList;
+	const friendsList = $config.friendsList;
 </script>
 
 <div class="container">
