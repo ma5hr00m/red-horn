@@ -1,4 +1,5 @@
 <script>
+	import Icon from '@iconify/svelte';
 	import '$lib/styles/markdown/github-markdown-light.scss';
 	import { config } from '$lib/stores/index';
 	import TableOfContents from '$lib/components/TOC.svelte';
@@ -23,37 +24,80 @@
 	<title>{data.title} | {$config.site.title}</title>
 </svelte:head>
 
+
+<div class="card">
+	<div class="metadata">
+		<h1 class="postTitle">{data.title}</h1>
+		<p class="postMeta">
+			<span class="data author">
+				<Icon icon="material-symbols:account-box" />
+				{data.author}
+			</span>
+			<span class="data date">
+				<Icon icon="material-symbols:clarify" />
+				{data.date}
+			</span>
+			<span class="data category">
+				<Icon icon="material-symbols:book-2-rounded" />
+				{data.categories}
+			</span>
+		</p>
+		<div class="coverContainer">
+			<img class="cover" src={data.cover} alt={data.title} />
+		</div>
+	</div>
+	<article class="markdown-body">
+		<svelte:component this={data.content} />
+	</article>
+</div>
 <TableOfContents {headings} />
 
-<article class="markdown-body">
-	<h1 class="postTitle">{data.title}</h1>
-	<p class="postMeta">
-		<span class="author">{data.author}</span>
-		<span class="date">{data.date}</span>
-		<span class="categories">{data.categories}</span>
-	</p>
-	<div>
-		<img src={data.cover} alt={data.title} />
-	</div>
-	<svelte:component this={data.content} />
-</article>
-
-<style>
-	.markdown-body {
-		min-width: 720px;
-		max-width: 980px;
+<style lang="scss">
+	.card {
+		width: 54rem;
 		height: fit-content;
-		margin: 0 auto;
+		margin: 0 1rem 0 0;
 		padding: 2rem;
 		background: #fff;
-		color: #4f4a4a;
-		border-radius: 0.5rem;
-		border: solid 1px #ddd;
-	}
+		color: vr.$text;
+		border-radius: .25rem;
+		border: solid 1px vr.$card-border;
 
-	@media (max-width: 767px) {
+		.metadata {
+
+			.postMeta {
+				margin: 1rem 0 0 0;
+				display: flex;
+				column-gap: 1rem;
+				color: vr.$primary-color;
+				font-weight: 600;
+
+				.data {
+					display: flex;
+					align-items: center;
+					column-gap: .25rem;
+				}
+			}
+			
+			.coverContainer {
+				margin: 1rem 0 0 0;
+				width: 50rem;
+				height: 30rem;
+				border: solid 1px #ddd;
+				border-radius: .25rem;
+				overflow: hidden;
+				background-color: vr.$image-background;
+
+				.cover {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+		}
+
 		.markdown-body {
-			padding: 15px;
+			margin: 2rem 0 0 0 ;
 		}
 	}
 </style>

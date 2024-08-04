@@ -33,14 +33,14 @@
 	nav {
 		display: flex;
 		height: fit-content;
-		border-radius: 0.5rem;
+		border-radius: 0.25rem;
 		gap: 1.5rem;
 		justify-content: center;
 		align-items: center;
-		background: #fff;
-		color: #444;
+		background: vr.$card;
+		color: vr.$text;
 		transition: width 0.3s;
-		border: solid 1px #ddd;
+		border: solid 1px vr.$card-border;
 		transition: width 0.3s;
 	}
 	.routes {
@@ -55,13 +55,13 @@
 		text-decoration: none;
 		color: inherit;
 		padding: 0.4rem 0.8rem;
-		border-radius: 0.5rem;
+		border-radius: 0.25rem;
 		font-size: 1rem;
 		transition: all 0.3s;
 		white-space: nowrap;
 
 		&:hover {
-			background: #ccf398;
+			background: vr.$navigation-hover;
 			color: #fff;
 		}
 
@@ -88,7 +88,7 @@
 	}
 
 	a[aria-current='page'] {
-		background: #95d146;
+		background: vr.$primary-color;
 		color: #fff;
 
 		& > .iconsContainer {

@@ -9,22 +9,15 @@
 	<svelte:component this={content} />
 </article>
 
-<style>
+<style lang="scss">
 	.markdown-body {
-		min-width: 720px;
-		max-width: 980px;
+		width: 54rem;
 		height: fit-content;
-		margin: 0 auto;
+		margin: 0 1rem 0 0;
 		padding: 2rem;
-		background: #fff;
-		color: #4f4a4a;
-		border-radius: 0.5rem;
-		border: solid 1px #ddd;
-	}
-
-	@media (max-width: 767px) {
-		.markdown-body {
-			padding: 15px;
-		}
+		background: vr.$card;
+		color: vr.$text;
+		border-radius: .25rem;
+		border: solid 1px vr.$card-border;
 	}
 </style>

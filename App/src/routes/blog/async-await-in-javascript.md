@@ -4,7 +4,10 @@ date: '2024-05-17'
 categories:
   - 'JavaScript'
 author: ma5hr00m
-cover: 'https://agu-img.oss-cn-hangzhou.aliyuncs.com/blog/20230924231727.png'
+cover: https://i.pinimg.com/564x/f9/2d/13/f92d13b856f32b84afb4e0cb5e464153.jpg
+tags:
+- JavaScript
+- Test
 ---
 
 `async/await` 是 JavaScript 用来处理异步操作的语法。它们建立在 Promise 的基础上，提供了一种简洁直观的方式来编写和管理异步代码，现在也已经成为了 JavaScript 实际上的最佳异步编程方案。

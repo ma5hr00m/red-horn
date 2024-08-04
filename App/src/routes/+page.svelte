@@ -34,7 +34,7 @@
 			</div>
 			<div class="illustrationContainer">
 				<div class="illustrationContent">
-					<img class="illustration" alt="illustration" src="/src/lib/assets/occc.png" />
+					<img class="illustration" alt="illustration" src="https://agu-img.oss-cn-hangzhou.aliyuncs.com/main/emoticon/6.png" />
 				</div>
 			</div>
 		</div>
@@ -166,7 +166,7 @@
 				position: relative;
 				height: 18rem;
 				width: 18rem;
-				border-radius: 50% 50% 50% 0%;
+				border-radius: .5rem;
 				background: #95d146;
 				display: flex;
 				justify-content: center;

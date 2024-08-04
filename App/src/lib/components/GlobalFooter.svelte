@@ -1,42 +1,19 @@
-<script>
-	import SocialLinksList from './socialLinksList.svelte';
-	export let socialLinks = [
-		{
-			href: 'https://x.com/Usami_Kinoko',
-			title: 'Twitter'
-		},
-		{
-			href: 'https://github.com/ma5hr00m',
-			title: 'GitHub'
-		}
-	];
-</script>
-
 <footer>
-	<div class="container">
-		<section>
-			<p>&copy; 2024 Usami Kinoko. All rights reserved.</p>
-		</section>
-		<SocialLinksList {socialLinks} />
-	</div>
+  <div>
+    © 2024 Usami Kinoko, all rights reserved.
+  </div>
+  <div></div>
 </footer>
 
 <style lang="scss">
-	footer {
-		padding: 0 9rem 1.5rem;
+  footer {
+		position: relative;
+		background: green;
+		padding: 1rem 0 1rem 0;
 		width: 100%;
+		height: fit-content;
 		display: flex;
-		justify-content: center;
-	}
-	.container {
-		padding: 1rem 2rem;
-		background: #fff;
-		border-radius: 0 0 0.5rem 0.5rem;
-		min-width: 100%;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		min-width: 980px;
-		max-width: 980px;
-	}
+		display: grid;
+		grid-template-columns: 1fr auto 1fr;
+  }
 </style>

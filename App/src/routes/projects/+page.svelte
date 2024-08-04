@@ -20,11 +20,6 @@
 	</div>
 </div>
 
-<!--
-  background: #ddd;
-  
--->
-
 <style lang="scss">
 	.container {
 		width: fit-content;

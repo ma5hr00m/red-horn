@@ -27,16 +27,17 @@
 	button {
     width: 2.25rem;
 		background-color: transparent;
-    color: #95d146;
+    color: #444;
 		border: none;
-		border-radius: 4px;
+		border-radius: .5rem;
 		cursor: pointer;
     transition: background-color 0.3s;
 
     &:hover {
-      background-color: #95d146;
+      background-color: vr.$navigation-hover;
       color: white;
     }
+		
 
     > span {
       display: flex;
@@ -47,7 +48,7 @@
 	}
 
 	button:disabled {
-		background-color: #cccccc;
+		background-color: transparent;
 		cursor: not-allowed;
 	}
 </style>

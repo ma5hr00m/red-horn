@@ -2,12 +2,21 @@
 	export let headings = [];
 
 	function getIndentation(level) {
-		return `${(level - 1) * 1.5}rem`;
+		const hasH1 = headings.some(heading => heading.level === 1);
+
+		if (hasH1) {
+			return `${(level - 1) * 1.5}rem`;
+		} else {
+			return `${(level - 2) * 1.5}rem`;
+		}
 	}
+
+	console.log(headings);
 </script>
 
 <aside class="toc">
 	<h2>目录</h2>
+	<hr class="line" />
 	<ul>
 		{#each headings as { id, text, level }}
 			<li style="padding-left: {getIndentation(level)};">
@@ -17,28 +26,42 @@
 	</ul>
 </aside>
 
-<style>
+<style lang="scss">
 	.toc {
 		position: sticky;
 		top: 1rem;
+		height: fit-content;
+		width: 15rem;
 		padding: 1rem;
-		background: #f9f9f9;
-		border: 1px solid #ddd;
-		border-radius: 0.5rem;
-	}
+		background: vr.$card;
+		border: 1px solid vr.$card-border;
+		border-radius: .25rem;
+		font-size: .9rem;
 
-	.toc ul {
-		list-style: none;
-		padding: 0;
-	}
+		.line {
+			margin: .5rem 0 .75rem;
+		}
 
-	.toc li {
-		margin: 0.5rem 0;
-	}
+		ul {
+			list-style: none;
+		}
 
-	.toc a {
-		text-decoration: none;
-		color: #007bff;
+		li {
+			margin: .5rem 0;
+
+			&:first-child {
+				margin: 0;
+			}
+		}
+
+		a {
+			color: vr.$text;
+			transition: color .3s;
+
+			&:hover {
+				color: vr.$primary-color;
+			}
+		}
 	}
 
 	.toc a:hover {

@@ -1,4 +1,5 @@
 <script>
+	import { page } from '$app/stores';
 	import GlobalHeader from '$lib/components/GlobalHeader.svelte';
 	import '$lib/styles/styles.scss';
 	import Meta from '$lib/components/Meta.svelte';
@@ -11,7 +12,7 @@
 	let navigation = $config.navigation.map((route, index) => ({ ...route, index }));
 	let title = $config.site.title;
 	let currentTitle;
-	let currentRoute;
+	let currentRoute = $page.url.pathname;;
 	let targetRoute;
 	let currentRouteIndex;
 	let targetRouteIndex;
@@ -42,7 +43,8 @@
 	});
 
 	afterNavigate(() => {
-		updateTitle(targetRoute);
+		currentRoute = $page.url.pathname;
+		updateTitle(currentRoute);
 	});
 </script>
 
@@ -53,24 +55,28 @@
 <Meta site={$config.site}></Meta>
 <GlobalHeader></GlobalHeader>
 {#key data.currentRoute}
-	<main in:fly={enterTransition} out:fly={exitTransition}>
-		<slot />
-	</main>
+	<div class="Root">
+		<main in:fly={enterTransition} out:fly={exitTransition}>
+			<slot />
+		</main>
+	</div>
 {/key}
 
 <style lang="scss">
 	:global(body) {
-		background: #f5f5f5;
+		background: vr.$background;
 		font-family: 'Noto Sans SC', sans-serif;
 	}
 
-	:global(.root) {
+	.Root {
 		position: relative;
 		top: 0;
 		left: 0;
 		display: flex;
 		flex-direction: column;
-		min-height: 100vh;
+		width: 100%;
+    height: 100%;
+		padding: 6rem 0 0;
 	}
 
 	main {
