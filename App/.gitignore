@@ -1,4 +1,7 @@
+# Config
 node_modules
+.vscode
+.idea
 
 # Output
 .output
