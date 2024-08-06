@@ -25,13 +25,18 @@
 <style lang="scss">
 	.card {
 		height: fit-content;
-		border: 1px solid #ccc;
-		border-radius: 0.5rem;
+		border: 1px solid vr.$card-border;
+		border-radius: .25rem;
 		transition: all 0.3s;
 		padding: 1rem;
 
 		&:hover {
-			background: #eee;
+			background: vr.$card-hover;
+			border-color: vr.$primary-color;
+		}
+
+		&:hover .image .cover {
+			height: 120%;
 		}
 
 		.image {
@@ -40,13 +45,13 @@
 			align-items: center;
 			height: 9rem;
 			width: 16rem;
-			background: #ddd;
-			border-radius: 0.5rem;
+			background: vr.$image-background;
+			border-radius: .25rem;
 			border: 1px solid #ccc;
 			overflow: hidden;
 
 			.cover {
-				width: 100%;
+				transition: all .3s ease-in-out;
 				height: 100%;
 			}
 		}
@@ -54,7 +59,7 @@
 		// 元素上下排布时，元素垂直间距应该通过父元素指定；
 		// 否则应该由处于下方的元素指定，这样方便后续元素的添加 :)
 		.text {
-			color: #404040;
+			color: vr.$text;
 			overflow: hidden;
 			text-overflow: ellipsis;
 			margin: 0.75rem 0 0 0;
@@ -63,6 +68,7 @@
 			font-size: 1rem;
 		}
 		.description {
+			color: vr.$text-snippet;
 			width: 16rem;
 			min-height: 3.6rem; // 2行文本的高度
 			margin: 0.25rem 0 0 0;

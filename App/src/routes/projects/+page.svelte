@@ -1,4 +1,5 @@
 <script>
+	import Icon from '@iconify/svelte';
 	import ProjectCard from '$lib/components/card/ProjectCard.svelte';
 	import { config } from '$lib/stores/index';
 	const projectsList = $config.projectsList;
@@ -8,7 +9,10 @@
 	<div class="content">
 		{#each projectsList as project}
 			<section class="group">
-				<h2>{project.sort}</h2>
+				<h2 style="--h-color: {project.color}">
+					<Icon icon={project.icon} />
+					{project.sort}
+				</h2>
 				<p>{project.description}</p>
 				<div class="projects">
 					{#each project.projects as item}
@@ -22,16 +26,11 @@
 
 <style lang="scss">
 	.container {
-		width: fit-content;
-		height: fit-content;
 		padding: 2rem;
-		background: #fff;
-		color: #4f4a4a;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		border-radius: 0.5rem;
-		border: solid 1px #ddd;
+		@include mx.card(fit-content, fit-content);
 
 		.content {
 			display: flex;
@@ -47,6 +46,10 @@
 
 				h2 {
 					font-size: 1.5rem;
+					display: flex;
+					align-items: center;
+					gap: .5rem;
+					color: var(--h-color);
 				}
 
 				p {

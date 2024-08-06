@@ -1,11 +1,14 @@
 <script>
 	import { page } from '$app/stores';
 	import GlobalHeader from '$lib/components/GlobalHeader.svelte';
+	import GlobalFooter from '$lib/components/GlobalFooter.svelte';
 	import '$lib/styles/styles.scss';
 	import Meta from '$lib/components/Meta.svelte';
 	import { config } from '$lib/stores/index';
 	import { fly } from 'svelte/transition';
 	import { onNavigate, afterNavigate } from '$app/navigation';
+	import Navigation from '$lib/components/Navigation.svelte';
+	const routes = $config.navigation.map((route, index) => ({ ...route, index }));
 
 	export let data;
 
@@ -48,42 +51,48 @@
 	});
 </script>
 
+<!-- {#key data.currentRoute}{/key} -->
+
 <svelte:head>
 	<title>{currentTitle} | {title}</title>
 </svelte:head>
 
 <Meta site={$config.site}></Meta>
-<GlobalHeader></GlobalHeader>
+
+<header>
+	<Navigation {routes}></Navigation>
+</header>
 {#key data.currentRoute}
-	<div class="Root">
-		<main in:fly={enterTransition} out:fly={exitTransition}>
-			<slot />
-		</main>
-	</div>
+	<main in:fly={enterTransition} out:fly={exitTransition}>
+		<slot />
+	</main>
 {/key}
 
 <style lang="scss">
-	:global(body) {
-		background: vr.$background;
-		font-family: 'Noto Sans SC', sans-serif;
-	}
-
-	.Root {
-		position: relative;
-		top: 0;
-		left: 0;
+	:global(.root) {
+		width: 100%;
+		height: fit-content;
+		min-height: 100vh;
 		display: flex;
+		align-items: center;
 		flex-direction: column;
-		width: 100%;
-    height: 100%;
-		padding: 6rem 0 0;
+		min-height: 100vh;
+		background-color: vr.$background;
+		// background-image: linear-gradient(90deg, #d0d0d0 2%, #ffffff00 5%), linear-gradient(#d0d0d0 2%, #fafafa 5%);
+		// background-size: 1rem 1rem;
+		// background-repeat: repeat;
 	}
 
-	main {
-		padding: 0 6rem 2.5rem;
-		width: 100%;
-		flex: 1;
-		display: flex;
+	header {
+		display: grid;
 		justify-content: center;
+		padding: 1rem 0 1rem;
+		height: fit-content;
+		width: 100%;
+	}
+	main {
+		display: grid;
+		justify-content: center;
+		flex-grow: 1;
 	}
 </style>

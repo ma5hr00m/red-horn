@@ -27,9 +27,9 @@
 	button {
     width: 2.25rem;
 		background-color: transparent;
-    color: #444;
+    color: vr.$text;
 		border: none;
-		border-radius: .5rem;
+		border-radius: .25rem;
 		cursor: pointer;
     transition: background-color 0.3s;
 

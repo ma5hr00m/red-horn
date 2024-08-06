@@ -1,0 +1,22 @@
+@use 'variables' as vr;
+
+@mixin card($width: fit-content, $height: fit-content) {
+  background: vr.$card;
+  border: 1px solid vr.$card-border;
+  color: vr.$text;
+  width: $width;
+  height: $height;
+  border-radius: .25rem;
+}
+
+@mixin flex-center($direction: row) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @if $direction == column {
+    flex-direction: column;
+  } @else {
+    flex-direction: row;
+  }
+}

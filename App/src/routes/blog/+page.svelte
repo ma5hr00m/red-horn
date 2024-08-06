@@ -58,19 +58,16 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		@include mx.card();
 	}
 	ul {
 		display: flex;
 		flex-direction: column;
 		list-style: none;
-		background: vr.$card;
-		color: vr.$text;
-		border-radius: .25rem;
 		overflow: hidden;
-		border: solid 1px vr.$card-border;
 
 		> li {
-			border-top: 1px solid #e0e0e0;
+			border-top: 1px solid vr.$card-border;
 		}
 
 		> li:first-child { 
@@ -179,7 +176,8 @@
 				width: 15rem;
 				border-radius: 0.25rem;
 				overflow: hidden;
-				border: solid 1px #ddd;
+				border: solid 1px vr.$card-border;
+				background-color: vr.$image-background;
 
 				> img {
 					width: 100%;

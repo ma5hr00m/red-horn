@@ -61,56 +61,85 @@ notice:
 # /projects
 projectsList:
   - sort: 个人项目
-    description: 这里是我个人的一些项目，包括博客、工具等等。
+    icon: material-symbols:workspace-premium-rounded
+    color: '#00D574'
+    description: 这里是我的一些个人项目，包括博客、工具等等。
     projects:
       - title: Kinoko个人博客
-        description: 个人博客框架，特点是简洁的页面设计以及丰富的交互动效，目前仍处于开发阶段，功能持续更新中。
+        description: 个人博客框架，填一填高三暑假的坑，无止境的优化与修改中，会把新学到的开发知识都用在这上面，所以服务可能不太稳定 >_<
         cover: https://img.ma5hr00m.top/main/whoami.png
         href: https://github.com/ma5hr00m/whoami
         tags:
           - SvelteKit
           - JavaScript
-      - title: HGAME2024等待页
-        description: HGAME 2024 等待页，并没有什么特色，只是一个简单的等待页。
-        cover: https://img.ma5hr00m.top/main/hgame2024.png
-        href: https://hgame.ma5hr00m.top/
+  - sort: 前端长动画
+    color: '#FF33BD'
+    icon: material-symbols:animated-images-rounded
+    description: 展示性的网页长动画，没什么实用价值，但可能会用帅。为什么写这些东西？因为感觉很有趣。
+    projects:
+      - title: Kinoko(old)
+        description: 过去的某段时间中，kinoko个人主页使用的开场动画。采用了一种相对优雅的实现多章节长动画的方案。
+        cover: https://img.ma5hr00m.top/main/projects/kinoko-old.png
+        href: https://github.com/ma5hr00m/im
+        tags:
+          - React
+          - SCSS
+      - title: Frieren
+        description: 为纪念某部动画的播出，随手写的前端动画。第一次写长动画，愚蠢地使用了原生三件套，找时间一定重写！(画饼)
+        cover: https://img.ma5hr00m.top/main/projects/frieren.png
+        href: https://github.com/ma5hr00m/Frieren
         tags:
           - HTML
           - CSS
-          - JavaScript
 
 # Friends List
 # /friends
 friendsList:
   - name: ek1ng
     avatar: https://q1.qlogo.cn/g?b=qq&nk=761042182&s=160
+    tag: CTFer / Cybersecurity
     href: https://ek1ng.com
-    description: Web方向CTFer，安全行业
+    description: Vidar强大学长
+    color: '#418fde'
   - name: ripple
     avatar: https://q1.qlogo.cn/g?b=qq&nk=3331491980&s=160
+    tag: HDUer
     href: https://rippleqaq.top
-    description: 学霸，中国时区美国作息
+    description: 上海时区纽约作息
+    color: '#14C4E3'
   - name: ch405
     avatar: https://q1.qlogo.cn/g?b=qq&nk=1286518974&s=160
+    tag: CTFer
     href: https://ch405.live
-    description: Misc方向CTFer，面面俱到
+    description: 万能草时&互联网史官
+    color: '#F22E8A'
   - name: zbwer
     avatar: https://q1.qlogo.cn/g?b=qq&nk=1641064392&s=160
+    tag: Frontend Developer
     href: https://blog.zbwer.work
-    description: Frontend Web Developer
+    description: 强大のUESTC前端学长
+    color: '#14C4E3'
   - name: Ec3o
     avatar: https://q1.qlogo.cn/g?b=qq&nk=2499302531&s=160
+    tag: CTFer
     href: https://ec3o.fun
-    description: Web方向CTFer
+    description: 新任兔兔妈
+    color: '#4F9EFF'
   - name: mysid
     avatar: https://q1.qlogo.cn/g?b=qq&nk=821675766&s=160
+    tag: CTFer
     href: http://mysid.top
-    description: Web方向CTFer，渗透/Java特攻
+    description: Java&渗透研究-ing
+    color: '#FF02CB'
   - name: Pinpe
     avatar: https://agu-img.oss-cn-hangzhou.aliyuncs.com/blog/a2bb7859939871165f438ab2f96d72b8343dae41.jpg%40150w_150h.jpg
+    tag: Misc Developer
     href: https://pinpe.top
     description: 一个属于自己的云朵
+    color: '#47D52A'
   - name: smilkes
     avatar: https://q1.qlogo.cn/g?b=qq&nk=1937683643&s=160
+    tag: HDUer / Machine Learning
     href: http://smilkes.site
-    description: 机器学习研究
+    description: 机器学习
+    color: '#30303a'

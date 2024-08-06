@@ -31,16 +31,11 @@
 
 <style lang="scss">
 	nav {
-		display: flex;
+		@include mx.flex-center();
+		@include mx.card();
 		height: fit-content;
 		border-radius: 0.25rem;
 		gap: 1.5rem;
-		justify-content: center;
-		align-items: center;
-		background: vr.$card;
-		color: vr.$text;
-		transition: width 0.3s;
-		border: solid 1px vr.$card-border;
 		transition: width 0.3s;
 	}
 	.routes {

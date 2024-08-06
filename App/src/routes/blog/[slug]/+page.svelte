@@ -24,35 +24,39 @@
 	<title>{data.title} | {$config.site.title}</title>
 </svelte:head>
 
-
-<div class="card">
-	<div class="metadata">
-		<h1 class="postTitle">{data.title}</h1>
-		<p class="postMeta">
-			<span class="data author">
-				<Icon icon="material-symbols:account-box" />
-				{data.author}
-			</span>
-			<span class="data date">
-				<Icon icon="material-symbols:clarify" />
-				{data.date}
-			</span>
-			<span class="data category">
-				<Icon icon="material-symbols:book-2-rounded" />
-				{data.categories}
-			</span>
-		</p>
-		<div class="coverContainer">
-			<img class="cover" src={data.cover} alt={data.title} />
+<div class="container">
+	<div class="card">
+		<div class="metadata">
+			<h1 class="postTitle">{data.title}</h1>
+			<p class="postMeta">
+				<span class="data author">
+					<Icon icon="material-symbols:account-box" />
+					{data.author}
+				</span>
+				<span class="data date">
+					<Icon icon="material-symbols:clarify" />
+					{data.date}
+				</span>
+				<span class="data category">
+					<Icon icon="material-symbols:book-2-rounded" />
+					{data.categories}
+				</span>
+			</p>
+			<div class="coverContainer">
+				<img class="cover" src={data.cover} alt={data.title} />
+			</div>
 		</div>
+		<article class="markdown-body">
+			<svelte:component this={data.content} />
+		</article>
 	</div>
-	<article class="markdown-body">
-		<svelte:component this={data.content} />
-	</article>
+	<TableOfContents {headings} />
 </div>
-<TableOfContents {headings} />
 
 <style lang="scss">
+	.container {
+		display: flex;
+	}
 	.card {
 		width: 54rem;
 		height: fit-content;
