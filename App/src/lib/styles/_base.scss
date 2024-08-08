@@ -1,46 +1,54 @@
+@use 'variables' as vr;
+@use 'media' as md;
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	user-select: none;
-	-webkit-user-select: none;
+	// user-select: none; -webkit-user-select: none;
+}
+
+html {
+	font-size: 16px;
+	@include md.respond-to('large') {
+		font-size: 16px;
+	}
+	@include md.respond-to('medium') {
+		font-size: 14px;
+	}
+	@include md.respond-to('small') {
+		font-size: 12px;
+	}
+}
+
+html, body {
+	position: relative;
+  height: 100%;
+  background: vr.$background;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.root {
+	width: 100%;
+	height: fit-content;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	min-height: 100vh;	
 }
 
 a {
 	text-decoration: none;
+	&:hover, &:active, &:visited { color: inherit; }
 }
 
-:root {
-	font-size: 16px;
-  scroll-behavior: smooth; 
-}
-
-::-webkit-scrollbar {
-	display: none; /* Chrome Safari */
-}
-
-@media screen and (max-width: 1200px) {
-	:root {
-		font-size: 15px;
-	}
-}
-@media screen and (max-width: 992px) {
-	:root {
-		font-size: 14px;
-	}
-}
-@media screen and (max-width: 768px) {
-	:root {
-		font-size: 13px;
-	}
-}
-@media screen and (max-width: 576px) {
-	:root {
-		font-size: 12px;
-	}
-}
-@media screen and (max-height: 648px) {
-	footer {
-		display: none;
-	}
+ul, ul {
+	list-style: none;
 }

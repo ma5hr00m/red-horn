@@ -5,7 +5,11 @@
 	const projectsList = $config.projectsList;
 </script>
 
-<div class="container">
+<svelte:head>
+	<title>项目 | {$config.site.title}</title>
+</svelte:head>
+
+<div class="wrapper">
 	<div class="content">
 		{#each projectsList as project}
 			<section class="group">
@@ -25,14 +29,16 @@
 </div>
 
 <style lang="scss">
-	.container {
-		padding: 2rem;
+	.wrapper {
+		position: relative;
+		width: 100%;
+		padding: 0 1rem;
 		display: flex;
-		flex-direction: column;
-		align-items: center;
-		@include mx.card(fit-content, fit-content);
+		justify-content: center;
 
 		.content {
+			@include mx.card(fit-content, fit-content);
+			padding: 2rem;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -48,7 +54,7 @@
 					font-size: 1.5rem;
 					display: flex;
 					align-items: center;
-					gap: .5rem;
+					gap: 0.5rem;
 					color: var(--h-color);
 				}
 

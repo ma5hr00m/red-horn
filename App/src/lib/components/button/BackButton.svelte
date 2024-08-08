@@ -25,26 +25,25 @@
 
 <style lang="scss">
 	button {
-    width: 2.25rem;
+		width: 2.25rem;
 		background-color: transparent;
-    color: vr.$text;
+		color: vr.$text;
 		border: none;
-		border-radius: .25rem;
+		border-radius: 0.25rem;
 		cursor: pointer;
-    transition: background-color 0.3s;
+		transition: background-color 0.3s;
 
-    &:hover {
-      background-color: vr.$navigation-hover;
-      color: white;
-    }
-		
+		&:hover {
+			background-color: vr.$navigation-hover;
+			color: white;
+		}
 
-    > span {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 1.2rem;
-    }
+		> span {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 1.2rem;
+		}
 	}
 
 	button:disabled {

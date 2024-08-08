@@ -1,11 +1,15 @@
 # Site
 # meta content
 site:
-  title: 菇物语
+  title: 菇言菇语
+  subTitle: 欢迎来到
   favicon: https://img.ma5hr00m.top/blog/im-favicon.svg
   author: kinoko
   description: 蘑菇の物语是kinoko(ma5hr00m)的个人网站，记录了他的技术博客以及一些生活感悟，是kinoko(ma5hr00m)对外展示的重要平台之一
   keywords: kinoko, Kinoko, 蘑菇の物语, 菇物语, ma5hr00m, Ma5hr00m, kinoko的博客, kinoko的个人网站, ma5hr00m的博客, ma5hr00m的个人网站
+  avatar: https://q1.qlogo.cn/g?b=qq&nk=3411281455&s=160
+  welcome: 阿菇 Kinoko 的个人网站，为互联网旅人提供一个了解阿菇的窗口。主打技术内容分享，也会有旅游杂记等生活类文章，希望我的文字能让您感到有趣。
+    
 
 # Navigation
 navigation:
@@ -21,9 +25,9 @@ navigation:
   - title: 友链
     href: /friends
     icon: hugeicons:clapping-02
-  - title: 项目
-    href: /projects
-    icon: hugeicons:codesandbox
+  # - title: 项目
+  #   href: /projects
+  #   icon: hugeicons:codesandbox
 
 # Site Links
 # icon: https://icon-sets.iconify.design/hugeicons/?keyword=Huge
@@ -55,7 +59,7 @@ surveyList:
 # Notice
 notice:
   title: 公告
-  content: 本站仍处于开发阶段，新功能不断添加中 :)
+  content: 🚀 该站点长期处于开发阶段，新功能持续添加中
 
 # Projects List
 # /projects

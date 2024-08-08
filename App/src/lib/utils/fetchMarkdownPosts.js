@@ -2,7 +2,7 @@ import fs from 'fs/promises';
 import path from 'path';
 
 export const fetchMarkdownPosts = async () => {
-	const allPostFiles = import.meta.glob('/src/routes/blog/**/*.md');
+	const allPostFiles = import.meta.glob('/docs/posts/**/*.md');
 	const iterablePostFiles = Object.entries(allPostFiles);
 
 	const allPosts = await Promise.all(
@@ -18,11 +18,12 @@ export const fetchMarkdownPosts = async () => {
 
 			return {
 				meta: metadata,
-				path: postPath,
+				path: '/blog' + postPath,
 				snippet: snippet
 			};
 		})
 	);
 
+	// console.log(allPosts);
 	return allPosts;
 };

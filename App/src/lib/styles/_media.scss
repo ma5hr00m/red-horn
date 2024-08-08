@@ -1,0 +1,27 @@
+$breakpoints: (
+  'small'  : ( max-width:  640px ),
+  'medium' : ( min-width:  641px, max-width: 1024px ),
+  'large'  : ( min-width: 1024px )
+);
+
+@mixin respond-to($name) {
+  @if map-has-key($breakpoints, $name) {
+    $breakpoint: map-get($breakpoints, $name);
+    @if map-has-key($breakpoint, 'min-width') and map-has-key($breakpoint, 'max-width') {
+      @media (min-width: #{map-get($breakpoint, 'min-width')}) and (max-width: #{map-get($breakpoint, 'max-width')}) {
+        @content;
+      }
+    } @else if map-has-key($breakpoint, 'min-width') {
+      @media (min-width: #{map-get($breakpoint, 'min-width')}) {
+        @content;
+      }
+    } @else if map-has-key($breakpoint, 'max-width') {
+      @media (max-width: #{map-get($breakpoint, 'max-width')}) {
+        @content;
+      }
+    }
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$name}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}

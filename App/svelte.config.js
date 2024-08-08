@@ -19,6 +19,7 @@ const config = {
 				prependData: `
             @use 'src/lib/styles/variables' as vr;
             @use 'src/lib/styles/mixins' as mx;
+            @use 'src/lib/styles/media' as md;
           `
 			}
 		}),

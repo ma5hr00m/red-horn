@@ -6,8 +6,8 @@ categories:
 author: ma5hr00m
 cover: https://i.pinimg.com/474x/9f/c4/88/9fc4883fa81ea6a7d81a4868f60a5a13.jpg
 tags:
-- JavaScript
-- Test
+  - JavaScript
+  - Test
 ---
 
 Promise 规范最早由 CommonJS 社区提出，后来成为 ES2015（ES6） 语言规范，到现在可以说已经成了异步编程的首选方案。

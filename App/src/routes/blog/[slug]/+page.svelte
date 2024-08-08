@@ -8,6 +8,11 @@
 	export let data;
 
 	let headings = [];
+	let showTOC = true;
+
+	const updateTOCVisibility = () => {
+		showTOC = window.innerWidth >= 1024;
+	};
 
 	onMount(() => {
 		headings = Array.from(
@@ -17,6 +22,13 @@
 			text: heading.innerText,
 			level: parseInt(heading.tagName[1])
 		}));
+
+		updateTOCVisibility();
+		window.addEventListener('resize', updateTOCVisibility);
+
+		return () => {
+			window.removeEventListener('resize', updateTOCVisibility);
+		};
 	});
 </script>
 
@@ -24,7 +36,7 @@
 	<title>{data.title} | {$config.site.title}</title>
 </svelte:head>
 
-<div class="container">
+<div class="wrapper">
 	<div class="card">
 		<div class="metadata">
 			<h1 class="postTitle">{data.title}</h1>
@@ -50,25 +62,32 @@
 			<svelte:component this={data.content} />
 		</article>
 	</div>
-	<TableOfContents {headings} />
+	{#if showTOC}
+		<TableOfContents {headings} />
+	{/if}
 </div>
 
+
 <style lang="scss">
-	.container {
+	.wrapper {
+		position: relative;
+		width: 100%;
+		padding: 0 1rem;
 		display: flex;
+		justify-content: center;
 	}
 	.card {
-		width: 54rem;
+		width: 100%;
+		max-width: 54rem;
 		height: fit-content;
 		margin: 0 1rem 0 0;
 		padding: 2rem;
 		background: #fff;
 		color: vr.$text;
-		border-radius: .25rem;
+		border-radius: 0.25rem;
 		border: solid 1px vr.$card-border;
 
 		.metadata {
-
 			.postMeta {
 				margin: 1rem 0 0 0;
 				display: flex;
@@ -79,16 +98,16 @@
 				.data {
 					display: flex;
 					align-items: center;
-					column-gap: .25rem;
+					column-gap: 0.25rem;
 				}
 			}
-			
+
 			.coverContainer {
 				margin: 1rem 0 0 0;
-				width: 50rem;
-				height: 30rem;
+				width: 100%;
+				height: 20rem;
 				border: solid 1px #ddd;
-				border-radius: .25rem;
+				border-radius: 0.25rem;
 				overflow: hidden;
 				background-color: vr.$image-background;
 
@@ -101,7 +120,7 @@
 		}
 
 		.markdown-body {
-			margin: 2rem 0 0 0 ;
+			margin: 2rem 0 0 0;
 		}
 	}
 </style>

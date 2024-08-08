@@ -2,7 +2,7 @@
 	export let headings = [];
 
 	function getIndentation(level) {
-		const hasH1 = headings.some(heading => heading.level === 1);
+		const hasH1 = headings.some((heading) => heading.level === 1);
 
 		if (hasH1) {
 			return `${(level - 1) * 1.5}rem`;
@@ -10,8 +10,6 @@
 			return `${(level - 2) * 1.5}rem`;
 		}
 	}
-
-	console.log(headings);
 </script>
 
 <aside class="toc">
@@ -35,11 +33,11 @@
 		padding: 1rem;
 		background: vr.$card;
 		border: 1px solid vr.$card-border;
-		border-radius: .25rem;
-		font-size: .9rem;
+		border-radius: 0.25rem;
+		font-size: 0.9rem;
 
 		.line {
-			margin: .5rem 0 .75rem;
+			margin: 0.5rem 0 0.75rem;
 		}
 
 		ul {
@@ -47,7 +45,7 @@
 		}
 
 		li {
-			margin: .5rem 0;
+			margin: 0.5rem 0;
 
 			&:first-child {
 				margin: 0;
@@ -56,7 +54,7 @@
 
 		a {
 			color: vr.$text;
-			transition: color .3s;
+			transition: color 0.3s;
 
 			&:hover {
 				color: vr.$primary-color;

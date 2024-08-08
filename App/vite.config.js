@@ -1,10 +1,19 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
+import path from 'path';
 
 export default defineConfig({
 	plugins: [sveltekit()],
 	server: {
-		host: true
+		host: true,
+		fs: {
+			allow: [path.resolve('./docs')]
+		}
+	},
+	resolve: {
+		alias: {
+			$docs: './docs'
+		}
 	}
 });
 

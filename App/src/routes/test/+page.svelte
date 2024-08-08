@@ -8,7 +8,6 @@
 		const response = await fetch('/api/config');
 		if (response.ok) {
 			config = await response.json();
-			console.log(config);
 		} else {
 			console.error('Failed to fetch config');
 		}

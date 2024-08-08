@@ -6,12 +6,11 @@ categories:
 author: ma5hr00m
 cover: https://i.pinimg.com/564x/6c/72/e2/6c72e2337a91fa58a984472f585f6cf0.jpg
 tags:
-- JavaScript
-- Test
+  - JavaScript
+  - Test
 ---
 
 事件循环是 JavaScript 管理事件执行顺序的流程，具体实现与运行环境有关。本篇文章主要讲述浏览器环境中的事件循环，Node.js 中的会少量带过。
-
 
 ## 同步异步
 
