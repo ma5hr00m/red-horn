@@ -1,29 +1,29 @@
 <script>
-  export let site;
+	export let site;
 </script>
 
 <div class="bannerCard">
-  <div class="content">
-    <div class="title">
-      <hgroup>
-        <p>{site.subTitle}</p>
-        <h1>{site.title}</h1>
-      </hgroup>
-      <div class="avatar">
-        <img src={site.avatar} alt="avatar" />
-      </div>
-    </div>
-    <p>{site.welcome}</p>
-  </div>
-  <div class="banner"></div>
+	<div class="content">
+		<div class="title">
+			<hgroup>
+				<p>{site.subTitle}</p>
+				<h1>{site.title}</h1>
+			</hgroup>
+			<div class="avatar">
+				<img src={site.avatar} alt="avatar" />
+			</div>
+		</div>
+		<p>{site.welcome}</p>
+	</div>
+	<div class="banner"></div>
 </div>
 
 <style lang="scss">
-  .bannerCard {
+	.bannerCard {
 		width: 100%;
 		max-width: 64rem;
 		overflow: hidden;
-		
+
 		@include md.respond-to('large') {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
@@ -91,7 +91,6 @@
 			background-repeat: no-repeat;
 			overflow: hidden;
 
-			
 			@include md.respond-to('large') {
 				height: 100%;
 			}

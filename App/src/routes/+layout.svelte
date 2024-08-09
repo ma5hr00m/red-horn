@@ -14,12 +14,11 @@
 	let enterTransition, exitTransition;
 
 	onNavigate(({ to, from }) => {
-		const currentRouteIndex = routes.find(route => route.href === from.route.id)?.index;
-		const targetRouteIndex = routes.find(route => route.href === to.route.id)?.index;
+		const currentRouteIndex = routes.find((route) => route.href === from.route.id)?.index;
+		const targetRouteIndex = routes.find((route) => route.href === to.route.id)?.index;
 		({ enterTransition, exitTransition } = updateTransitions(currentRouteIndex, targetRouteIndex));
 	});
 </script>
-
 
 <Meta {site} />
 <header>
@@ -30,7 +29,6 @@
 		<slot />
 	</div>
 {/key}
-
 
 <style lang="scss">
 	header {

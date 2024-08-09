@@ -24,7 +24,7 @@
 		padding: 0 1rem;
 		display: flex;
 		justify-content: center;
-	
+
 		.articleList {
 			@include mx.card(100%, fit-content);
 			max-width: 56rem;

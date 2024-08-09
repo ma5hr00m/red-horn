@@ -24,7 +24,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		
+
 		.markdown-body {
 			max-width: 64rem;
 			height: fit-content;

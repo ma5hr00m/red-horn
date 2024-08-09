@@ -67,7 +67,6 @@
 	{/if}
 </div>
 
-
 <style lang="scss">
 	.wrapper {
 		position: relative;

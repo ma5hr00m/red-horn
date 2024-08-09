@@ -1,6 +1,6 @@
 <script>
 	import Icon from '@iconify/svelte';
-	
+
 	export let post;
 </script>
 
@@ -54,7 +54,7 @@
 
 		.articleLink {
 			padding: 2rem;
-		
+
 			@include md.respond-to('large') {
 				display: flex;
 				justify-content: space-between;
@@ -167,7 +167,7 @@
 				@include md.respond-to('large') {
 					height: 9rem;
 					width: 15rem;
-					min-width: 15rem;	
+					min-width: 15rem;
 				}
 				@include md.respond-to('medium') {
 					height: 9rem;
@@ -188,5 +188,4 @@
 			}
 		}
 	}
-
 </style>
