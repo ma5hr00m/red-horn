@@ -1,6 +1,8 @@
 <script>
 	import '$lib/styles/markdown/github-markdown-light.scss';
 	import { config } from '$lib/stores/index';
+	import '$lib/styles/markdown/kinoko-markdown-dark.scss';
+
 	export let data;
 	const { title, content } = data;
 </script>
@@ -26,12 +28,12 @@
 		align-items: center;
 
 		.markdown-body {
-			max-width: 64rem;
+			max-width: 50rem;
 			height: fit-content;
 			padding: 2rem;
 			background: vr.$card;
 			color: vr.$text;
-			border-radius: 0.25rem;
+			border-radius: vr.$card-radius;
 			border: solid 1px vr.$card-border;
 		}
 	}

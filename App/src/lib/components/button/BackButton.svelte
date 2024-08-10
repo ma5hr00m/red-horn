@@ -29,7 +29,7 @@
 		background-color: transparent;
 		color: vr.$text;
 		border: none;
-		border-radius: 0.25rem;
+		border-radius: vr.$card-radius;
 		cursor: pointer;
 		transition: background-color 0.3s;
 

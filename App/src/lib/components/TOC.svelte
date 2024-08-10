@@ -33,7 +33,7 @@
 		padding: 1rem;
 		background: vr.$card;
 		border: 1px solid vr.$card-border;
-		border-radius: 0.25rem;
+		border-radius: vr.$card-radius;
 		font-size: 0.9rem;
 
 		.line {

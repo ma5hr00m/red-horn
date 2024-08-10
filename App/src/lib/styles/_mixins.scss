@@ -6,7 +6,7 @@
 	color: vr.$text;
 	width: $width;
 	height: $height;
-	border-radius: vr.$card-raiuds;
+	border-radius: vr.$card-radius;
 }
 
 @mixin flex-center($direction: row) {

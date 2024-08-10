@@ -34,7 +34,7 @@
 		@include mx.flex-center();
 		@include mx.card();
 		height: fit-content;
-		border-radius: 0.25rem;
+		border-radius: vr.$card-radius;
 		gap: 1.5rem;
 		transition: width 0.3s;
 	}
@@ -50,7 +50,7 @@
 		text-decoration: none;
 		color: inherit;
 		padding: 0.4rem 0.8rem;
-		border-radius: 0.25rem;
+		border-radius: vr.$card-radius;
 		font-size: 1rem;
 		transition: all 0.3s;
 		white-space: nowrap;

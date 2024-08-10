@@ -159,7 +159,7 @@
 			}
 
 			.articleCover {
-				border-radius: 0.25rem;
+				border-radius: vr.$card-radius;
 				overflow: hidden;
 				border: solid 1px vr.$card-border;
 				background-color: vr.$image-background;

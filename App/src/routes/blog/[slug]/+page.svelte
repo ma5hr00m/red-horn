@@ -1,9 +1,9 @@
 <script>
 	import Icon from '@iconify/svelte';
-	import '$lib/styles/markdown/github-markdown-light.scss';
 	import { config } from '$lib/stores/index';
 	import TableOfContents from '$lib/components/TOC.svelte';
 	import { onMount } from 'svelte';
+	import '$lib/styles/markdown/kinoko-markdown-dark.scss';
 
 	export let data;
 
@@ -77,14 +77,11 @@
 	}
 	.card {
 		width: 100%;
-		max-width: 54rem;
+		max-width: 50rem;
 		height: fit-content;
-		margin: 0 1rem 0 0;
-		padding: 2rem;
-		background: #fff;
-		color: vr.$text;
-		border-radius: 0.25rem;
-		border: solid 1px vr.$card-border;
+		margin: 0 1rem 2rem 0;
+		padding: 2.5rem;
+		@include mx.card();
 
 		.metadata {
 			.postMeta {
@@ -105,10 +102,9 @@
 				margin: 1rem 0 0 0;
 				width: 100%;
 				height: 20rem;
-				border: solid 1px #ddd;
-				border-radius: 0.25rem;
+				border: solid 1px vr.$card-border;
+				border-radius: vr.$card-radius;
 				overflow: hidden;
-				background-color: vr.$image-background;
 
 				.cover {
 					width: 100%;

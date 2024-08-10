@@ -28,6 +28,8 @@
 		"svelte": "^4.2.7",
 		"svelte-preprocess": "^6.0.2",
 		"vite": "^5.0.3",
+		"winston": "^3.14.1",
+		"winston-daily-rotate-file": "^5.0.0",
 		"yaml": "^2.5.0"
 	},
 	"type": "module"

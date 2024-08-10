@@ -26,7 +26,7 @@
 	.card {
 		height: fit-content;
 		border: 1px solid vr.$card-border;
-		border-radius: 0.25rem;
+		border-radius: vr.$card-radius;
 		transition: all 0.3s;
 		padding: 1rem;
 
@@ -46,7 +46,7 @@
 			height: 9rem;
 			width: 16rem;
 			background: vr.$image-background;
-			border-radius: 0.25rem;
+			border-radius: vr.$card-radius;
 			border: 1px solid #ccc;
 			overflow: hidden;
 
