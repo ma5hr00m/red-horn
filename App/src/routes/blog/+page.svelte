@@ -1,4 +1,5 @@
 <script>
+	import NoticeCard from '$lib/components/card/NoticeCard.svelte';
 	import { config } from '$lib/stores/index';
 	import ArticleCard from '$lib/components/card/ArticleCard.svelte';
 
@@ -10,6 +11,11 @@
 </svelte:head>
 
 <div class="wrapper">
+	<NoticeCard maxWidth="56rem">
+		📦 文章尚未全部搬运到此站点，详情可见原博客站点：<a href="https://ma5hr00m.github.io"
+			>ma5hr00m.github.io</a
+		>
+	</NoticeCard>
 	<div class="articleList">
 		{#each data.posts as post}
 			<ArticleCard {post}></ArticleCard>
@@ -23,7 +29,9 @@
 		width: 100%;
 		padding: 0 1rem;
 		display: flex;
-		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
 
 		.articleList {
 			@include mx.card(100%, fit-content);
@@ -32,6 +40,14 @@
 			flex-direction: column;
 			list-style: none;
 			overflow: hidden;
+		}
+	}
+
+	a {
+		color: vr.$primary-color;
+
+		&:hover {
+			text-decoration: underline;
 		}
 	}
 </style>

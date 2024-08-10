@@ -10,7 +10,9 @@
 
 <div class="wrapper">
 	<BannerCard site={$config.site}></BannerCard>
-	<NoticeCard notice={$config.notice.content}></NoticeCard>
+	<NoticeCard maxWidth="64rem">
+		{$config.notice.content}
+	</NoticeCard>
 </div>
 
 <!--

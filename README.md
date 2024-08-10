@@ -5,7 +5,7 @@
 ## todo
 
 - [ ] 响应式优化
-- [ ] Navigation优化
+- [ ] Navigation样式优化
 - [ ] TOC优化
 - [ ] 主页社交链接
 - [ ] 主页旁站链接
