@@ -1,5 +1,4 @@
 <script>
-	import '$lib/styles/markdown/github-markdown-light.scss';
 	import { config } from '$lib/stores/index';
 	import '$lib/styles/markdown/kinoko-markdown-dark.scss';
 

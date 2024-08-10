@@ -6,6 +6,7 @@ export default defineConfig({
 	plugins: [sveltekit()],
 	server: {
 		host: true,
+		port: 4000,
 		fs: {
 			allow: [path.resolve('./docs')]
 		}
