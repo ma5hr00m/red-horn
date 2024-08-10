@@ -1,14 +1,15 @@
-# kinoko-words
+# kinoko-words (WIP)
 
-『菇言菇语』，基于 SvelteKit 开发的个人博客应用。
+<img style="width: 100%;" src="./static/kinoko-words-banner.png" alt="kinoko-words-banner"></img>
 
-## todo
+🚀 『菇言菇语』，基于 SvelteKit 开发的个人博客应用
 
-- [ ] 响应式优化
-- [ ] Navigation样式优化
-- [ ] TOC优化
-- [ ] 主页社交链接
-- [ ] 主页旁站链接
-- [ ] 关于页博客历史时间轴
-- [ ] 开篇动画
-- [ ] 虚拟形象页
+## Usage
+
+Working in progress, currently only the development environment is available.
+
+```shell
+cd /App
+pnpm i
+pnpm run dev
+```
