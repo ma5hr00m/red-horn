@@ -4,6 +4,8 @@
 
 🚀 『菇言菇语』，基于 SvelteKit 开发的个人博客应用
 
+⚙️ [demo 站点](http://kinoko.ma5hr00m.top/)
+
 ## Usage
 
 Working in progress, currently only the development environment is available.
