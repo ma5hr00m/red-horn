@@ -107,7 +107,7 @@
 				position: absolute;
 				left: 0;
 				top: 0;
-				background: #ffffff;
+				background: vr.$card;
 				backdrop-filter: blur(1rem);
 
 				@include md.respond-to('large') {

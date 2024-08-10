@@ -36,6 +36,10 @@
 		border-radius: vr.$card-radius;
 		font-size: 0.9rem;
 
+		h2 {
+			color: #c0c0c0;
+		}
+
 		.line {
 			margin: 0.5rem 0 0.75rem;
 		}
