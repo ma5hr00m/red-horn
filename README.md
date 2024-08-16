@@ -1,17 +1,24 @@
-# kinoko-words (WIP)
-
-<img style="width: 100%;" src="./static/kinoko-words-banner.png" alt="kinoko-words-banner"></img>
-
-🚀 『菇言菇语』，基于 SvelteKit 开发的个人博客应用
-
-⚙️ [demo 站点](http://kinoko.ma5hr00m.top/)
+# kinoko-words
 
 ## Usage
 
-Working in progress, currently only the development environment is available.
+If you are a user in China, you can use the Chinese npm mirror. 
 
 ```shell
-cd /App
-pnpm i
-pnpm run dev
+# tabao npm mirror
+pnpm config set registry https://registry.npmmirror.com/
+# offical mirror
+pnpm config set registry https://registry.npmjs.org/
 ```
+
+Install project dependencies.
+
+```shell
+pnpm install
+```
+
+## Todo
+
+- [ ] refactor with TypeScript
+- [ ] optimize base layout
+- [ ] optimize data loading format

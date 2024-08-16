@@ -1,0 +1,136 @@
+$primary-color: #ff3a3a;
+$secondary-color: #cb3232;
+$text-color: #c0c0c0;
+$light-text-color: #909090;
+$background-color: #252525;
+$code-background-color: #282626;
+$pre-background-color: #202020;
+$table-header-background-color: #3a3a3a;
+$table-row-odd-background-color: #303030;
+$table-row-even-background-color: #3a3a3a;
+$table-hover-background-color: #5a5a5a;
+
+.markdown-body {
+  background-color: transparent;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 2rem 0 1rem;
+    color: #fff;
+  }
+
+  p {
+    color: $text-color;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  a {
+    position: relative;
+    color: $primary-color !important;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $secondary-color !important;
+    }
+  }
+
+  code {
+    padding: 0.1rem 0.3rem;
+    background-color: $code-background-color;
+    border-radius: 0.15rem;
+    color: $primary-color;
+    font-family: sans;
+  }
+
+  img {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  ul,
+  ol {
+    color: $text-color;
+    padding: 0 0 0 1rem;
+    margin: 1rem 0;
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  .contains-task-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    line-height: 1.5rem;
+  }
+
+  blockquote {
+    padding: 0.75rem 0 0.75rem 1.5rem;
+    border-left: 0.25rem solid $primary-color;
+    background: $background-color;
+    margin: 1rem 0;
+
+    p {
+      color: $light-text-color;
+      line-height: 1.5rem;
+    }
+
+    p:last-child {
+      margin: 0;
+    }
+  }
+
+  pre {
+    padding: 1rem 1.5rem;
+    background-color: $pre-background-color;
+    border-radius: 0.15rem;
+
+    code {
+			background-color: inherit;
+      color: #f0f0f0;
+    }
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  th {
+    background-color: $table-header-background-color;
+    padding: 0.5rem;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  td {
+    padding: 0.5rem;
+    text-align: left;
+  }
+
+  tr:nth-child(odd) {
+    background-color: $table-row-odd-background-color;
+  }
+
+  tr:nth-child(even) {
+    background-color: $table-row-even-background-color;
+  }
+
+  td:hover {
+    background-color: $table-hover-background-color;
+  }
+}
