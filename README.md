@@ -22,3 +22,13 @@ pnpm install
 - [ ] refactor with TypeScript
 - [ ] optimize base layout
 - [ ] optimize data loading format
+  
+## Tools
+
+In the process of developing the project, in order to improve development efficiency, I wrote some simple tools.
+
+### getPolygonFromPixso.py
+
+I implemented a low-poly graphic animation for my homepage in this project. During development, I used Pixso to create web page prototypes. However, Pixso lacks the functionality to define irregular polygons using the `clip-path` attribute, even for a simple triangle. To streamline the creation of low-poly animations, I manually extracted graphic parameters from Pixso and converted them into the required `polygon()` parameters through calculations.
+
+The implementation principle of this tool is very simple. You only need to understand the principle of the `polygon()` function.

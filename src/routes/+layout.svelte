@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import '$lib/styles/_base.scss';
   import Navigation from '$lib/components/function/Navigation.svelte';
 </script>
@@ -6,7 +6,6 @@
 
 <div id="kinoko_app">
   <div class="aside-wrapper"></div>
-  <div></div>
   <div class="main-wrapper">
     <div class="bg"></div>
     <div class="bg-deco"></div>
@@ -15,12 +14,12 @@
         <Navigation></Navigation>
       </div>
     </header>
-    <slot/>
-    <footer>
-
-    </footer>
+    <main>
+      <slot/>
+    </main>
   </div>
 </div>
+
 
 <style lang="scss">
   #kinoko_app {

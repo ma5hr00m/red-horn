@@ -119,3 +119,140 @@
 @mixin red() {
   background: linear-gradient(to bottom, #3A3937 95%, #ff3a3a);
 }
+
+// set transition for all brother span
+// @mixin transition($shape) {
+//   @for $i from 1 through length($shape) {
+//     & ~ span:nth-of-type(#{$i}) {
+//       position: absolute;
+//       transition: all 2s cubic-bezier(.5, .25, 0, 1);
+//     }
+//   }
+// }
+
+// set style for each span (excluding position)
+@mixin shape($shape) {
+  @for $i from 1 through length($shape) {
+    $item: nth($shape, $i);
+    & > span:nth-of-type(#{$i}) {
+      width: nth($item, 3);
+      height: nth($item, 4);
+      background-color: nth($item, 5);
+      clip-path: nth($item, 6);
+    }
+  }
+}
+
+// set position for each span
+@mixin compose($shape) {
+  @for $i from 1 through length($shape) {
+    $item: nth($shape, $i);
+    & > span:nth-of-type(#{$i}) {
+      left: nth($item, 1);
+      top: nth($item, 2);
+      // 定位存在问题，我想想看能不能修，临时解决方案是负方向偏移 50% 的图像宽高 :(
+      transform: translate(-125em, -140em);
+      animation: none;
+      animation-delay: none;
+      transition: all 2s cubic-bezier(.5, .25, 0, 1);
+    }
+  }
+}
+
+// remove position for each span
+@mixin composeRemove($shape) {
+  @for $i from 1 through length($shape) {
+    $item: nth($shape, $i);
+    & > span:nth-of-type(#{$i}) {
+      left: 0;
+      top: 0;
+      transition: all 2s cubic-bezier(.5, .25, 0, 1);
+    }
+  }  
+}
+
+
+@mixin rotate($shape) {
+  @for $i from 1 through length($shape) {
+    $item: nth($shape, $i);
+    & ~ span:nth-of-type(#{$i}) {
+      width: 49.8em;
+      height: 98.1em; /* 高度 */
+      background-color: #f00; /* 设置背景颜色 */
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      transform: rotate(7.2deg); /* 旋转 c/2 度 */
+      transition: all 2s cubic-bezier(.5, .25, 0, 1);
+    }
+  }
+}
+
+
+
+@mixin surround($shape) {
+  // $radius 应略小于 height/2，以消除 CSS 图形拼接时的白色缝隙
+  $radius: 23em;
+  @for $i from 1 through length($shape) {
+    $item: nth($shape, $i);
+    & > span:nth-of-type(#{$i}) {
+      $angle: calc(360deg / length($shape)) * ($i);
+      $top: sin($angle) * $radius;
+      $left: cos($angle) * $radius;
+      position: absolute;
+      transform: translate($left, $top) translate(-50%, -50%) rotateZ($angle - 90deg) rotateX(180deg);
+      // 保持 width/height
+      width: 12.45em;
+      height: 49.05em;
+      clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+      background-color: #303030;
+      // 应等待 animation 执行完成后执行变幻操作，否则 animation 中断会导致 transition 不生效
+      animation: colorChange 2s linear;
+      animation-delay: ($i - 1) * .1s;
+      // 指定次数的重复 animation 似乎没有原生支持
+      // animation-iteration-count: 2;
+    }
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    background-color: #303030;
+  }
+  8% {
+    background-color: #404040;
+  }
+  100% {
+    background-color: #303030;
+  }
+}
+
+@mixin compose-rotate($shape) {
+  @include surround($shape);
+  // ...
+}
+
+@mixin shape-static($shape) {
+  position: relative;
+  width: 250em;
+  height: 280em;
+  
+  @include shape($shape);
+}
+
+@mixin test($shape) {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 10em;
+  
+  @for $i from 1 through length($shape) {
+    $item: nth($shape, $i);
+    & > span:nth-of-type(#{$i}) {
+      position: static;
+      width: 30em;
+      height: 30em;
+      border-radius: 5em;
+      background-color: #3c3c3c;
+    }
+  }
+}

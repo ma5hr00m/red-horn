@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { config } from '$lib/context/index';
+  import LowPoly from '$lib/components/function/LowPoly.svelte';
+import { config } from '$lib/context/index';
 
   const projectConfig: any = $config;
 </script>
@@ -10,17 +11,17 @@
 
 <div class="wrapper">
   <div class="content">
-    <hgroup>
-      <h1>菇 言 菇 语</h1>
-      <p></p>
-    </hgroup>
-    <div class="socialLinks">
+    <!-- <h1>Hello, world!</h1> -->
+    <LowPoly></LowPoly>
+    <!-- <hgroup>
+    </hgroup> -->
+    <!-- <div class="socialLinks">
         {#each projectConfig.socialLinks as socialLink}
           <a href={socialLink.url}>
             {socialLink.title}
           </a>
         {/each}
-    </div>
+    </div> -->
   </div>
 </div>
 
@@ -35,6 +36,9 @@
 
   .content {
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     hgroup {
       h1 {
@@ -51,6 +55,13 @@
           transform: translateY(-1rem);
         }
       }
+
+      // p {
+      //   background-color: red;
+      //   width: 10rem;
+      //   height: 10rem;
+      //   clip-path: path('M21 98L36 146L0 142L21 98Z');
+      // }
     }
 
     

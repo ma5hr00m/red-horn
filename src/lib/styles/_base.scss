@@ -7,12 +7,12 @@
 }
 
 :root {
-  font-size: 16px;
-
+  @include md.respond-to('large') {
+    font-size: 16px;
+  }
   @include md.respond-to('medium') {
     font-size: 14px;
   }
-
   @include md.respond-to('small') {
     font-size: 12px;
   }
