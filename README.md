@@ -1,8 +1,15 @@
-# kinoko-words
+<div style="width:100%;display:flex;justify-content:center;">
+  <img style="width:100%;" src="static/red-horn.svg" alt="logo">
+</div>
+
+
+## Bulletin Board
+
+This project is a personal blog site developed based on Sveltekit, which is still in the development stage and no demo site has been provided yet :D
 
 ## Usage
 
-If you are a user in China, you can use the Chinese npm mirror. 
+If you are a user in China, you can use the Chinese npm mirror.
 
 ```shell
 # tabao npm mirror
@@ -19,11 +26,15 @@ pnpm install
 
 ## Todo
 
-- [ ] refactor with TypeScript
+- [x] refactor with TypeScript
 - [ ] optimize base layout
 - [ ] optimize data loading format
-  
-## Tools
+- [ ] low-poly opening animation
+- [ ] animation optimization
+- [ ] better markdown style
+- [ ] table of content component
+
+## Supporting Tools
 
 In the process of developing the project, in order to improve development efficiency, I wrote some simple tools.
 
