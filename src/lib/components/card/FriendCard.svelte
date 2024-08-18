@@ -45,7 +45,7 @@
 				opacity: 1;
 				-webkit-filter: blur(0);
 			}
-			
+
 			&:hover .text .tag {
 				background: vr.$theme-color;
 			}
@@ -74,7 +74,7 @@
 				.name {
 					font-size: 1.125rem;
 					font-weight: 600;
-					transition: all .5s;
+					transition: all 0.5s;
 				}
 
 				.tag {
@@ -86,7 +86,7 @@
 					font-size: 0.625rem;
 					padding: 0.125rem 0.75rem;
 					border-radius: 10rem;
-					transition: all .5s;
+					transition: all 0.5s;
 				}
 
 				.descriptionAndHref {
@@ -99,11 +99,11 @@
 					}
 
 					.description {
-						font-size: .875rem;
+						font-size: 0.875rem;
 					}
 
 					.href {
-						font-size: .875rem;
+						font-size: 0.875rem;
 						color: vr.$theme-color;
 						opacity: 0;
 						-webkit-filter: blur(1rem);

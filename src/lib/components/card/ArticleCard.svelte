@@ -45,7 +45,7 @@
 <style lang="scss">
 	.card {
 		@include mx.card(100%, fit-content);
-		border-left: .5rem solid vr.$card;
+		border-left: 0.5rem solid vr.$card;
 		height: fit-content;
 		transition: all 0.3s;
 
@@ -147,7 +147,7 @@
 					> span {
 						display: flex;
 						align-items: center;
-						column-gap: .325rem;
+						column-gap: 0.325rem;
 						text-wrap: nowrap;
 
 						> .icon {
@@ -161,7 +161,7 @@
 					.category {
 						color: #fff;
 						font-weight: 400;
-						transition: all .3s;
+						transition: all 0.3s;
 					}
 				}
 			}
@@ -176,7 +176,7 @@
 					width: 15rem;
 					min-width: 15rem;
 				}
-				
+
 				@include md.respond-to('medium') {
 					height: 9rem;
 					width: 15rem;

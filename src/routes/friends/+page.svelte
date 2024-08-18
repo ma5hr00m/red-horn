@@ -2,7 +2,7 @@
 	import { config } from '$lib/context/index';
 	import FriendCard from '$lib/components/card/FriendCard.svelte';
 
-  const projectConfig: any = $config;
+	const projectConfig: any = $config;
 </script>
 
 <svelte:head>
@@ -14,10 +14,6 @@
 		{#each projectConfig.friendsList as friend}
 			<FriendCard {friend}></FriendCard>
 		{/each}
-    <div class="placeholder"></div>
-    <div class="placeholder"></div>
-    <div class="placeholder"></div>
-    <div class="placeholder"></div>
 	</div>
 </div>
 
@@ -37,9 +33,9 @@
 			flex-wrap: wrap;
 			gap: 1.5rem;
 		}
-    .placeholder {
-      height: 14rem;
-      width: 14rem;
-    }
+		// .placeholder {
+		// 	height: 14rem;
+		// 	width: 14rem;
+		// }
 	}
 </style>

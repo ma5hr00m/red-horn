@@ -7,7 +7,7 @@
 	export let data;
 
 	let headings = [];
-  const projectConfig: any = $config;
+	const projectConfig: any = $config;
 </script>
 
 <svelte:head>

@@ -1,27 +1,27 @@
 @use 'media' as md;
 
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
 :root {
-  @include md.respond-to('large') {
-    font-size: 16px;
-  }
-  @include md.respond-to('medium') {
-    font-size: 14px;
-  }
-  @include md.respond-to('small') {
-    font-size: 12px;
-  }
+	@include md.respond-to('large') {
+		font-size: 16px;
+	}
+	@include md.respond-to('medium') {
+		font-size: 14px;
+	}
+	@include md.respond-to('small') {
+		font-size: 12px;
+	}
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 ::-webkit-scrollbar {
-  display: none;
+	display: none;
 }

@@ -3,7 +3,7 @@
 	import ArticleCard from '$lib/components/card/ArticleCard.svelte';
 
 	export let data;
-  const projectConfig: any = $config;
+	const projectConfig: any = $config;
 </script>
 
 <svelte:head>
@@ -22,7 +22,7 @@
 	.wrapper {
 		position: relative;
 		width: 100%;
-		padding:  1rem 1rem 0;
+		padding: 1rem 1rem 0;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -35,14 +35,6 @@
 			list-style: none;
 			overflow: hidden;
 			row-gap: 1rem;
-		}
-	}
-
-	a {
-		color: vr.$theme-color;
-
-		&:hover {
-			text-decoration: underline;
 		}
 	}
 </style>

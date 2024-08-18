@@ -1,8 +1,8 @@
 <script lang="ts">
-  import LowPoly from '$lib/components/function/LowPoly.svelte';
-import { config } from '$lib/context/index';
+	import LowPoly from '$lib/components/function/LowPoly.svelte';
+	import { config, logoAnime } from '$lib/context/index';
 
-  const projectConfig: any = $config;
+	const projectConfig: any = $config;
 </script>
 
 <svelte:head>
@@ -10,93 +10,107 @@ import { config } from '$lib/context/index';
 </svelte:head>
 
 <div class="wrapper">
-  <div class="content">
-    <!-- <h1>Hello, world!</h1> -->
-    <LowPoly></LowPoly>
-    <!-- <hgroup>
-    </hgroup> -->
+	<div class="content">
+		<LowPoly></LowPoly>
+    <div class="profile" class:load={!$logoAnime}>
+      <h2>
+        <span class="red">R</span>ED <span class="red">H</span>ORN</h2>
+      <p>KINOKO'S PERSONAL WEBSITE</p>
+    </div>
     <!-- <div class="socialLinks">
-        {#each projectConfig.socialLinks as socialLink}
-          <a href={socialLink.url}>
-            {socialLink.title}
-          </a>
-        {/each}
+      {#each projectConfig.socialLinks as socialLink}
+        <a href={socialLink.url}>
+          {socialLink.title}
+        </a>
+      {/each}
     </div> -->
-  </div>
+	</div>
 </div>
 
 <style lang="scss">
-  .wrapper {
-    position: relative;
-    width: 100%;
-    min-height: calc(100vh - 4.5rem);
-    padding: 2rem;
-    @include mx.flex-center();
-  }
+	.wrapper {
+		position: relative;
+		width: 100%;
+		min-height: calc(100vh - 9rem);
+		padding: 2rem;
+		@include mx.flex-center();
+	}
 
-  .content {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	.content {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 
-    hgroup {
-      h1 {
-        color: #4a4040;
-        font-size: 4rem;
+    .profile {
+      opacity: 0;
+      text-align: center;
+
+      h2 {
+        margin-top: 2rem;
+        font-size: 2.5rem;
         font-weight: 600;
-        text-wrap: nowrap;
-        text-shadow: 0 2px 4px #a0a0a0;
-        transition: all .3s;
-        cursor: pointer;
-        
-        &:hover {
-          color: vr.$theme-color;
-          transform: translateY(-1rem);
+        color: #3C3C3C;
+
+        .red {
+          color: #e91111;
         }
       }
 
-      // p {
-      //   background-color: red;
-      //   width: 10rem;
-      //   height: 10rem;
-      //   clip-path: path('M21 98L36 146L0 142L21 98Z');
-      // }
-    }
-
-    
-    .socialLinks {
-      margin-top: 2rem;
-      @include mx.flex-center();
-      gap: 1rem;
-
-      a {
-        position: relative;
+      p {
+        // margin-top: .5rem;
         font-size: 1.25rem;
-        color: #7b7575;
-        transition: all .3s;
-
-        &:hover {
-          color: vr.$theme-color;
-        }
-
-        &::after {
-          position: absolute;
-          content: '';
-          left: 50%;
-          bottom: -1.5rem;
-          opacity: 0;
-          transform: translateX(-50%);
-          border: .5rem solid;
-          border-color: transparent transparent vr.$theme-color transparent;
-          transition: all .3s;
-        }
-
-        &:hover::after {
-          bottom: -.75rem;
-          opacity: 1;
-        }
+        font-weight: 400;
+        color: #4C4C4C;
       }
     }
-  }
+
+    .load {
+      animation: fade-in 0.6s linear forwards;
+    }
+
+		@keyframes fade-in {
+			0% {
+				opacity: 0;
+			}
+			100% {
+				opacity: 1;
+			}
+		}
+
+		// .socialLinks {
+		//   margin-top: 3rem;
+		//   @include mx.flex-center();
+		//   gap: 1rem;
+
+		//   a {
+		//     position: relative;
+		//     font-size: 1.25rem;
+		//     color: #7b7575;
+		//     transition: all .3s;
+
+		//     &:hover {
+		//       color: vr.$theme-color;
+		//     }
+
+		//     &::after {
+		//       position: absolute;
+		//       content: '';
+		//       left: 50%;
+		//       bottom: -1.5rem;
+		//       opacity: 0;
+		//       transform: translateX(-50%);
+		//       border: .5rem solid;
+		//       border-color: transparent transparent vr.$theme-color transparent;
+		//       transition: all .3s;
+		//     }
+
+		//     &:hover::after {
+		//       bottom: -.75rem;
+		//       opacity: 1;
+		//     }
+		//   }
+		// }
+	}
 </style>

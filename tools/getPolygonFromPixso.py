@@ -34,7 +34,7 @@ def calculate_polygon_attributes(pixso_data):
 # 示例用法
 pixso_data = [
     # [graphic_x, graphic_y, graphic_w, graphic_h, point1_x, point1_y, point2_x, point2_y, point3_x, point3_y, color],
-    # left hole
+    # left horn
     [0, 0, 21, 142, 0, 0, 21, 98, 0, 142, '#E91111'],
     [0, 98, 36, 48, 21, 98, 36, 146, 0, 142, '#4C4C4C'],
     [0, 142, 40, 51, 0, 142, 36, 146, 40, 193, '#2E2E2E'],
